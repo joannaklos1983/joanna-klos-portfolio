@@ -90,7 +90,7 @@ export default function Home() {
                 <img
                  src="https://raw.githubusercontent.com/joannaklos1983/joanna-klos-portfolio/main/joanna-profile.jpg"
                   alt="Joanna Kłos"
-                  className="h-full w-full object-cover"
+                 className="h-full w-full object-cover object-[center_28%]"
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-[#2A1E18]/60 via-[#2A1E18]/15 to-transparent" />

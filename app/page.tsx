@@ -147,12 +147,11 @@ export default function Home() {
           <div className="rounded-[2rem] border border-[#8A5A3C]/15 bg-white/60 p-5 shadow-2xl shadow-[#8A5A3C]/10 backdrop-blur-xl">
             <div className="overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-[#F8F3EC] via-white to-[#E8D6CC]">
               <div className="relative h-[420px]">
-                <img
-                 src="https://raw.githubusercontent.com/joannaklos1983/joanna-klos-portfolio/main/joanna-profile.jpg"
-                  alt="Joanna Kłos"
-                 className="h-full w-full object-cover object-[center_28%] transition duration-700 hover:scale-105"
-                />
-
+                <div className="absolute inset-0 bg-gradient-to-br from-[#F8F3EC] via-[#E8D6CC] to-[#8A5A3C]" />
+<div className="absolute left-10 top-10 h-40 w-40 rounded-full bg-white/30 blur-2xl" />
+<div className="absolute bottom-10 right-10 h-48 w-48 rounded-full bg-[#2A1E18]/20 blur-3xl" />
+<div className="absolute left-1/4 top-1/4 h-56 w-56 rounded-full bg-white/25 blur-3xl" />
+<div className="absolute right-1/4 bottom-1/4 h-64 w-64 rounded-full bg-[#8A5A3C]/25 blur-3xl" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#2A1E18]/60 via-[#2A1E18]/15 to-transparent" />
 
                 <div className="absolute bottom-0 left-0 right-0 p-7 text-white">

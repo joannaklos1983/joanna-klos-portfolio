@@ -29,6 +29,13 @@ const steps = [
   ["04", "AI workflows", "Research, automatyzacja, prompt workflows, AI agents i prototypowanie."],
 ];
 
+const workflow = [
+  ["01", "Research & Analysis", "Analiza rynku, odbiorców, komunikacji i benchmarków."],
+  ["02", "Content Structuring", "Porządkowanie informacji, upraszczanie treści oraz projektowanie struktury stron i materiałów."],
+  ["03", "Prompt Workflows", "Budowanie powtarzalnych procesów pracy z AI dla treści, strategii i prototypów."],
+  ["04", "Rapid Prototyping", "Tworzenie landing page’y, prostych aplikacji i makiet z użyciem GitHub, Vercel, Claude, Cursor i v0."],
+];
+
 const skills = ["Marketing", "Strategy", "AI", "Content", "Web / Digital"];
 
 export default function Home() {
@@ -47,6 +54,7 @@ export default function Home() {
           <div className="hidden gap-8 text-sm text-[#7A665A] md:flex">
             <a href="#work" className="transition hover:text-[#8A5A3C]">How I Work</a>
             <a href="#projects" className="transition hover:text-[#8A5A3C]">Projects</a>
+            <a href="#ai-workflow" className="transition hover:text-[#8A5A3C]">AI Workflow</a>
             <a href="#experience" className="transition hover:text-[#8A5A3C]">Experience</a>
             <a href="#contact" className="transition hover:text-[#8A5A3C]">Contact</a>
           </div>
@@ -169,6 +177,38 @@ export default function Home() {
               <p className="mt-4 leading-7 text-[#7A665A]">{project.desc}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section id="ai-workflow" className="animate-fade-up mx-auto max-w-7xl px-6 py-16">
+        <div className="rounded-[2.5rem] border border-[#8A5A3C]/15 bg-white/55 p-8 shadow-2xl shadow-[#8A5A3C]/5 backdrop-blur md:p-10">
+          <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start">
+            <div>
+              <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">
+                AI-Native Workflow
+              </p>
+              <h2 className="mt-3 text-4xl font-semibold">
+                Marketing, treść i prototypowanie wspierane przez AI.
+              </h2>
+              <p className="mt-5 leading-7 text-[#7A665A]">
+                Wykorzystuję AI jako praktyczne wsparcie w analizie, strukturze treści,
+                tworzeniu komunikacji, prototypowaniu stron i aplikacji oraz organizacji pracy projektowej.
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {workflow.map(([nr, title, desc]) => (
+                <div
+                  key={title}
+                  className="rounded-[1.7rem] border border-[#8A5A3C]/15 bg-[#FAF7F2]/70 p-6 transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl hover:shadow-[#8A5A3C]/10"
+                >
+                  <span className="text-sm font-semibold text-[#8A5A3C]">{nr}</span>
+                  <h3 className="mt-4 text-xl font-semibold">{title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-[#7A665A]">{desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

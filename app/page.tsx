@@ -88,7 +88,7 @@ export default function Home() {
             <div className="overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-[#F8F3EC] via-white to-[#E8D6CC]">
               <div className="relative h-[420px]">
                 <img
-                  src="/joanna-profile.jpg"
+                 src="https://raw.githubusercontent.com/joannaklos1983/joanna-klos-portfolio/main/joanna-profile.jpg"
                   alt="Joanna Kłos"
                   className="h-full w-full object-cover"
                 />

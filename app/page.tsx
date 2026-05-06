@@ -17,9 +17,61 @@ const projects = [
 ];
 
 const experience = [
-  ["IDEO SP. Z O.O.", "Specjalistka ds. Wizerunku Pracodawcy", "2017–2024"],
-  ["PPHU SPECJAŁ", "Asystentka Biura Zarządu", "2024–2026"],
-  ["GRUPA INDITEX", "Menedżerka salonu", "2011–2014"],
+  {
+    company: "PPHU Specjał Sp. z o.o.",
+    role: "Asystentka w Biurze Zarządu",
+    period: "październik 2024 – luty 2026",
+    focus: "Koordynacja administracyjna, wsparcie projektów międzydziałowych i organizacja pracy biura zarządu.",
+    details: [
+      "Koordynacja działań administracyjnych i organizacyjnych biura zarządu: terminy, priorytety i obieg dokumentów.",
+      "Wsparcie projektów międzydziałowych oraz organizacja spotkań i wydarzeń wewnętrznych.",
+      "Przygotowywanie pism, raportów, zestawień i prezentacji w czytelnym, spójnym standardzie.",
+      "Rozliczanie faktur i wsparcie procesów administracyjnych z dbałością o porządek i terminowość.",
+    ],
+    tags: ["organizacja", "raporty", "prezentacje", "koordynacja"],
+  },
+  {
+    company: "Ideo Sp. z o.o.",
+    role: "Specjalistka ds. Wizerunku Pracodawcy",
+    period: "czerwiec 2017 – październik 2024",
+    focus: "Marketing operacyjny, komunikacja employer branding, treści online/offline, CMS i wydarzenia firmowe.",
+    details: [
+      "Koordynacja działań marketingowych w obszarze komunikacji i materiałów.",
+      "Tworzenie i redakcja materiałów marketingowych online/offline: prezentacje, treści i materiały promocyjne.",
+      "Publikacja i aktualizacja treści na stronie w CMS oraz współpraca z zespołami wewnętrznymi i partnerami.",
+      "Organizacja eventów, targów pracy i wydarzeń rekrutacyjnych oraz przygotowanie materiałów z wydarzeń firmowych.",
+      "Realizacja materiałów video we współpracy z grafikiem oraz tworzenie krótkich formatów video do digitalu.",
+      "Raportowanie działań i usprawnianie procesów komunikacyjnych.",
+    ],
+    tags: ["marketing", "EB", "CMS", "content", "eventy", "video"],
+  },
+  {
+    company: "Grupa Inditex",
+    role: "Menedżerka salonu firmowego",
+    period: "sierpień 2011 – kwiecień 2014",
+    focus: "Zarządzanie zespołem, standard obsługi, komunikacja operacyjna i wdrażanie pracowników.",
+    details: [
+      "Koordynacja pracy salonu i zespołu: organizacja, standardy i terminowość.",
+      "Dbanie o spójny wizerunek oraz standard obsługi zgodny z wymaganiami marki.",
+      "Przygotowywanie materiałów komunikacyjnych i wdrożeniowych dla zespołu.",
+      "Organizacja szkoleń, wdrażanie nowych pracowników oraz raportowanie wyników.",
+    ],
+    tags: ["zarządzanie", "zespół", "standardy", "raportowanie"],
+  },
+  {
+    company: "Trend & Fashion Group Sp. z o.o.",
+    role: "Koordynator Regionalny",
+    period: "grudzień 2007 – sierpień 2011",
+    focus: "Koordynacja regionalna, standardy operacyjne, działania promocyjne i raportowanie wyników.",
+    details: [
+      "Koordynacja działań operacyjnych i standardów w salonach w regionie.",
+      "Nadzór nad spójnością działań promocyjnych i jakością obsługi.",
+      "Organizacja otwarć i wydarzeń w placówkach: logistyka oraz współpraca z partnerami.",
+      "Monitorowanie wyników, przygotowywanie raportów i wdrażanie usprawnień.",
+      "Praca samodzielna i częste wyjazdy służbowe wymagające bardzo dobrej organizacji.",
+    ],
+    tags: ["region", "operacje", "promocje", "logistyka"],
+  },
 ];
 
 const steps = [
@@ -217,17 +269,59 @@ export default function Home() {
           Experience
         </p>
         <h2 className="mt-3 text-4xl font-semibold">Doświadczenie zawodowe.</h2>
+        <p className="mt-4 max-w-3xl leading-7 text-[#7A665A]">
+          Timeline pokazuje rozwój od koordynacji operacyjnej i zarządzania zespołem do marketingu,
+          komunikacji, CMS, contentu, eventów oraz wsparcia projektów organizacyjnych.
+        </p>
 
-        <div className="mt-10 space-y-4">
-          {experience.map(([company, role, years]) => (
-            <div
-              key={company}
-              className="rounded-[1.5rem] border border-[#8A5A3C]/15 bg-white/60 p-6 shadow-lg shadow-[#8A5A3C]/5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/75 hover:shadow-xl hover:shadow-[#8A5A3C]/10"
+        <div className="relative mt-12 space-y-8 before:absolute before:left-4 before:top-2 before:h-full before:w-px before:bg-[#8A5A3C]/20 md:before:left-1/2">
+          {experience.map((item, index) => (
+            <article
+              key={item.company}
+              className={`relative grid gap-6 md:grid-cols-2 ${index % 2 === 0 ? "md:[&>div]:col-start-2" : ""}`}
             >
-              <h3 className="text-xl font-semibold">{company}</h3>
-              <p className="mt-1 text-[#7A665A]">{role}</p>
-              <p className="mt-2 text-sm font-medium text-[#8A5A3C]">{years}</p>
-            </div>
+              <div className="absolute left-4 top-8 z-10 h-4 w-4 -translate-x-1/2 rounded-full border-4 border-[#FAF7F2] bg-[#8A5A3C] shadow-lg md:left-1/2" />
+
+              <div className="ml-10 rounded-[2rem] border border-[#8A5A3C]/15 bg-white/65 p-7 shadow-xl shadow-[#8A5A3C]/5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/80 hover:shadow-2xl hover:shadow-[#8A5A3C]/10 md:ml-0">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="rounded-full bg-[#E8D6CC]/70 px-3 py-1 text-xs font-medium text-[#8A5A3C]">
+                    {item.period}
+                  </span>
+                </div>
+
+                <h3 className="mt-5 text-2xl font-semibold">{item.role}</h3>
+                <p className="mt-1 font-medium text-[#8A5A3C]">{item.company}</p>
+                <p className="mt-4 leading-7 text-[#7A665A]">{item.focus}</p>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {item.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-[#8A5A3C]/15 bg-[#FAF7F2]/70 px-3 py-1 text-xs text-[#7A665A]"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <details className="group mt-6">
+                  <summary className="cursor-pointer list-none text-sm font-semibold text-[#8A5A3C] transition hover:text-[#2A1E18]">
+                    <span className="inline-flex items-center gap-2 rounded-full border border-[#8A5A3C]/20 bg-white/60 px-4 py-2">
+                      Zobacz zakres obowiązków
+                      <span className="transition group-open:rotate-45">+</span>
+                    </span>
+                  </summary>
+                  <ul className="mt-5 space-y-3 text-sm leading-6 text-[#7A665A]">
+                    {item.details.map((detail) => (
+                      <li key={detail} className="flex gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#8A5A3C]/60" />
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              </div>
+            </article>
           ))}
         </div>
       </section>

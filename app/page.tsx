@@ -29,29 +29,7 @@ const steps = [
   ["04", "AI workflows", "Research, automatyzacja, prompt workflows, AI agents i prototypowanie."],
 ];
 
-const tools = [
-  "Claude",
-  "Claude Code",
-  "Cursor",
-  "ChatGPT",
-  "v0",
-  "Codeck",
-  "GitHub",
-  "Vercel",
-  "AI Workers",
-  "Agent workflows",
-];
-
 const skills = ["Marketing", "Strategy", "AI", "Content", "Web / Digital"];
-
-const certificates = [
-  "AI w biznesie",
-  "AI w praktyce",
-  "AI w social media marketingu",
-  "Employer Branding",
-  "Kampanie, które sprzedają",
-  "Marketing internetowy — kurs zaawansowany",
-];
 
 export default function Home() {
   return (
@@ -59,7 +37,6 @@ export default function Home() {
       <div className="fixed inset-0 -z-10">
         <div className="absolute left-[-10%] top-[-10%] h-[420px] w-[420px] rounded-full bg-[#E8D6CC] blur-3xl opacity-70" />
         <div className="absolute right-[-8%] top-[20%] h-[360px] w-[360px] rounded-full bg-[#D8BFA5] blur-3xl opacity-60" />
-        <div className="absolute bottom-[-10%] left-[25%] h-[420px] w-[420px] rounded-full bg-[#F1E4D8] blur-3xl opacity-80" />
       </div>
 
       <nav className="sticky top-0 z-50 border-b border-[#8A5A3C]/10 bg-[#FAF7F2]/75 backdrop-blur-xl">
@@ -94,30 +71,52 @@ export default function Home() {
           </p>
 
           <div className="mt-9 flex flex-wrap gap-4">
-            <a href="#projects" className="rounded-full bg-[#8A5A3C] px-6 py-3 text-sm font-medium text-white shadow-lg shadow-[#8A5A3C]/20 transition hover:-translate-y-0.5">
+            <a href="#projects" className="rounded-full bg-[#8A5A3C] px-6 py-3 text-sm font-medium text-white shadow-lg shadow-[#8A5A3C]/20">
               Explore Projects
             </a>
-            <a href="#experience" className="rounded-full border border-[#8A5A3C]/20 bg-white/60 px-6 py-3 text-sm font-medium text-[#2A1E18] backdrop-blur transition hover:-translate-y-0.5">
+            <a href="#experience" className="rounded-full border border-[#8A5A3C]/20 bg-white/60 px-6 py-3 text-sm font-medium">
               View Experience
             </a>
-            <a href="#" className="rounded-full border border-[#8A5A3C]/20 bg-white/40 px-6 py-3 text-sm font-medium text-[#7A665A] backdrop-blur">
+            <a href="#" className="rounded-full border border-[#8A5A3C]/20 bg-white/40 px-6 py-3 text-sm font-medium text-[#7A665A]">
               Download CV
             </a>
           </div>
         </div>
 
         <div className="relative">
-          <div className="rounded-[2rem] border border-[#8A5A3C]/15 bg-white/60 p-6 shadow-2xl shadow-[#8A5A3C]/10 backdrop-blur-xl">
-            <div className="rounded-[1.5rem] bg-gradient-to-br from-[#F8F3EC] via-white to-[#E8D6CC] p-8">
-              <p className="text-sm uppercase tracking-[0.3em] text-[#8A5A3C]">AI-native portfolio</p>
-              <h2 className="mt-8 text-3xl font-semibold">Communication designed with clarity.</h2>
-              <p className="mt-4 leading-7 text-[#7A665A]">
-                Strategia, treść, narzędzia AI i prototypowanie — połączone w jeden praktyczny
-                workflow dla marek, projektów i komunikacji digital.
-              </p>
-              <div className="mt-8 grid grid-cols-2 gap-3">
+          <div className="rounded-[2rem] border border-[#8A5A3C]/15 bg-white/60 p-5 shadow-2xl shadow-[#8A5A3C]/10 backdrop-blur-xl">
+            <div className="overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-[#F8F3EC] via-white to-[#E8D6CC]">
+              <div className="relative h-[420px]">
+                <img
+                  src="/joanna-profile.jpg"
+                  alt="Joanna Kłos"
+                  className="h-full w-full object-cover"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2A1E18]/60 via-[#2A1E18]/15 to-transparent" />
+
+                <div className="absolute bottom-0 left-0 right-0 p-7 text-white">
+                  <p className="text-xs uppercase tracking-[0.3em] text-[#F8F3EC]/80">
+                    AI-native portfolio
+                  </p>
+
+                  <h2 className="mt-3 text-3xl font-semibold">
+                    Communication designed with clarity.
+                  </h2>
+
+                  <p className="mt-3 max-w-md text-sm leading-6 text-[#F8F3EC]/90">
+                    Strategia, treść, narzędzia AI i prototypowanie — połączone w jeden
+                    praktyczny workflow dla marek, projektów i komunikacji digital.
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3 p-5">
                 {skills.map((skill) => (
-                  <div key={skill} className="rounded-2xl bg-white/70 px-4 py-3 text-sm shadow-sm">
+                  <div
+                    key={skill}
+                    className="rounded-2xl bg-white/80 px-4 py-3 text-sm shadow-sm"
+                  >
                     {skill}
                   </div>
                 ))}
@@ -128,14 +127,19 @@ export default function Home() {
       </section>
 
       <section id="work" className="mx-auto max-w-7xl px-6 py-16">
-        <div className="mb-10 max-w-2xl">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">How I Work</p>
-          <h2 className="mt-3 text-4xl font-semibold">Od chaosu informacji do jasnej komunikacji.</h2>
-        </div>
+        <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">
+          How I Work
+        </p>
+        <h2 className="mt-3 max-w-2xl text-4xl font-semibold">
+          Od chaosu informacji do jasnej komunikacji.
+        </h2>
 
-        <div className="grid gap-5 md:grid-cols-4">
+        <div className="mt-10 grid gap-5 md:grid-cols-4">
           {steps.map(([nr, title, desc]) => (
-            <div key={title} className="rounded-[1.7rem] border border-[#8A5A3C]/15 bg-white/60 p-6 shadow-xl shadow-[#8A5A3C]/5 backdrop-blur transition hover:-translate-y-1">
+            <div
+              key={title}
+              className="rounded-[1.7rem] border border-[#8A5A3C]/15 bg-white/60 p-6 shadow-xl shadow-[#8A5A3C]/5 backdrop-blur"
+            >
               <span className="text-sm font-semibold text-[#8A5A3C]">{nr}</span>
               <h3 className="mt-5 text-xl font-semibold">{title}</h3>
               <p className="mt-3 text-sm leading-6 text-[#7A665A]">{desc}</p>
@@ -145,110 +149,65 @@ export default function Home() {
       </section>
 
       <section id="projects" className="mx-auto max-w-7xl px-6 py-16">
-        <div className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-          <div>
-            <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">Projects</p>
-            <h2 className="mt-3 text-4xl font-semibold">Wybrane projekty i kierunki rozwoju.</h2>
-          </div>
-          <a href="#contact" className="text-sm font-medium text-[#8A5A3C]">Let’s talk →</a>
-        </div>
+        <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">
+          Projects
+        </p>
+        <h2 className="mt-3 text-4xl font-semibold">
+          Wybrane projekty i kierunki rozwoju.
+        </h2>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
           {projects.map((project) => (
-            <article key={project.title} className="group rounded-[2rem] border border-[#8A5A3C]/15 bg-white/65 p-7 shadow-xl shadow-[#8A5A3C]/5 backdrop-blur transition hover:-translate-y-1">
+            <article
+              key={project.title}
+              className="rounded-[2rem] border border-[#8A5A3C]/15 bg-white/65 p-7 shadow-xl shadow-[#8A5A3C]/5 backdrop-blur"
+            >
               <span className="rounded-full bg-[#E8D6CC]/70 px-3 py-1 text-xs font-medium text-[#8A5A3C]">
                 {project.tag}
               </span>
               <h3 className="mt-8 text-2xl font-semibold">{project.title}</h3>
               <p className="mt-4 leading-7 text-[#7A665A]">{project.desc}</p>
-              <div className="mt-8 h-px bg-[#8A5A3C]/10" />
-              <p className="mt-5 text-sm text-[#8A5A3C]">View case direction →</p>
             </article>
           ))}
         </div>
       </section>
 
       <section id="experience" className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid gap-10 md:grid-cols-[0.8fr_1.2fr]">
-          <div>
-            <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">Experience</p>
-            <h2 className="mt-3 text-4xl font-semibold">Doświadczenie zawodowe.</h2>
-            <p className="mt-5 leading-7 text-[#7A665A]">
-              Połączenie marketingu, employer brandingu, koordynacji, pracy operacyjnej
-              i rozwijania projektów digital.
-            </p>
-          </div>
+        <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">
+          Experience
+        </p>
+        <h2 className="mt-3 text-4xl font-semibold">Doświadczenie zawodowe.</h2>
 
-          <div className="space-y-4">
-            {experience.map(([company, role, years]) => (
-              <div key={company} className="rounded-[1.5rem] border border-[#8A5A3C]/15 bg-white/60 p-6 shadow-lg shadow-[#8A5A3C]/5 backdrop-blur">
-                <div className="flex flex-col justify-between gap-2 md:flex-row">
-                  <div>
-                    <h3 className="text-xl font-semibold">{company}</h3>
-                    <p className="mt-1 text-[#7A665A]">{role}</p>
-                  </div>
-                  <span className="text-sm font-medium text-[#8A5A3C]">{years}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-6 py-16">
-        <div className="rounded-[2rem] border border-[#8A5A3C]/15 bg-[#2A1E18] p-8 text-white shadow-2xl shadow-[#8A5A3C]/15 md:p-12">
-          <p className="text-sm uppercase tracking-[0.25em] text-[#D8BFA5]">AI-native workflow</p>
-          <h2 className="mt-4 text-4xl font-semibold">Research, content, prototyping — szybciej i mądrzej.</h2>
-          <div className="mt-8 flex flex-wrap gap-3">
-            {["Research & analysis", "Content structuring", "AI agents", "Prompt workflows", "Rapid prototyping", "Landing pages & apps"].map((item) => (
-              <span key={item} className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-[#F8F3EC]">
-                {item}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto grid max-w-7xl gap-6 px-6 py-16 md:grid-cols-2">
-        <div className="rounded-[2rem] border border-[#8A5A3C]/15 bg-white/60 p-8 shadow-xl shadow-[#8A5A3C]/5 backdrop-blur">
-          <h2 className="text-3xl font-semibold">Tools</h2>
-          <div className="mt-6 flex flex-wrap gap-3">
-            {tools.map((tool) => (
-              <span key={tool} className="rounded-full bg-[#F8F3EC] px-4 py-2 text-sm text-[#7A665A]">
-                {tool}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <div className="rounded-[2rem] border border-[#8A5A3C]/15 bg-white/60 p-8 shadow-xl shadow-[#8A5A3C]/5 backdrop-blur">
-          <h2 className="text-3xl font-semibold">Education & Certifications</h2>
-          <div className="mt-6 space-y-4 text-[#7A665A]">
-            <p><strong className="text-[#2A1E18]">AGH</strong> — Marketing Internetowy</p>
-            <p><strong className="text-[#2A1E18]">Politechnika Rzeszowska</strong> — Marketing i Zarządzanie</p>
-          </div>
-          <div className="mt-6 grid gap-2">
-            {certificates.map((cert) => (
-              <p key={cert} className="rounded-2xl bg-[#F8F3EC] px-4 py-3 text-sm text-[#7A665A]">
-                {cert}
-              </p>
-            ))}
-          </div>
+        <div className="mt-10 space-y-4">
+          {experience.map(([company, role, years]) => (
+            <div
+              key={company}
+              className="rounded-[1.5rem] border border-[#8A5A3C]/15 bg-white/60 p-6 shadow-lg shadow-[#8A5A3C]/5 backdrop-blur"
+            >
+              <h3 className="text-xl font-semibold">{company}</h3>
+              <p className="mt-1 text-[#7A665A]">{role}</p>
+              <p className="mt-2 text-sm font-medium text-[#8A5A3C]">{years}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       <section id="contact" className="mx-auto max-w-7xl px-6 py-20">
         <div className="rounded-[2.5rem] border border-[#8A5A3C]/15 bg-gradient-to-br from-white/80 via-[#F8F3EC]/90 to-[#E8D6CC]/70 p-10 text-center shadow-2xl shadow-[#8A5A3C]/10 backdrop-blur md:p-16">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">Contact</p>
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">
+            Contact
+          </p>
           <h2 className="mx-auto mt-4 max-w-3xl text-4xl font-semibold md:text-5xl">
             Let’s build better communication & digital experiences.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl leading-7 text-[#7A665A]">
-            Portfolio pokazuje kierunek: strategia, komunikacja, AI i projekty webowe
-            w jasnej, profesjonalnej formule personal brand.
+            Strategia, komunikacja, AI i projekty webowe w jasnej, profesjonalnej formule personal brand.
           </p>
-          <div className="mt-8 flex justify-center">
-            <a href="mailto:" className="rounded-full bg-[#8A5A3C] px-7 py-3 text-sm font-medium text-white shadow-lg shadow-[#8A5A3C]/20">
+          <div className="mt-8">
+            <a
+              href="mailto:"
+              className="rounded-full bg-[#8A5A3C] px-7 py-3 text-sm font-medium text-white shadow-lg shadow-[#8A5A3C]/20"
+            >
               Contact
             </a>
           </div>

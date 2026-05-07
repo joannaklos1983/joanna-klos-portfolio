@@ -90,6 +90,27 @@ const workflow = [
 
 const skills = ["Marketing", "Strategy", "AI", "Content", "Web / Digital"];
 
+const skillGroups = [
+  {
+    title: "Marketing & Communication",
+    items: ["marketing operacyjny", "employer branding", "komunikacja marki", "materiały online/offline", "eventy i targi", "współpraca z partnerami"],
+  },
+  {
+    title: "Content & Digital",
+    items: ["redakcja treści", "struktura informacji", "CMS / WordPress", "landing pages", "krótkie formaty video", "prezentacje i materiały promocyjne"],
+  },
+  {
+    title: "Project & Operations",
+    items: ["koordynacja projektów", "organizacja pracy", "raportowanie", "analiza działań", "usprawnianie procesów", "praca międzydziałowa"],
+  },
+  {
+    title: "AI & Prototyping",
+    items: ["AI-assisted research", "prompt workflows", "AI content support", "prototypowanie stron", "proste aplikacje", "agent workflows"],
+  },
+];
+
+const tools = ["MS Office", "Canva", "Asana", "CMS / WordPress", "CapCut", "ChatGPT", "Claude", "Claude Code", "Cursor", "v0", "GitHub", "Vercel", "Codeck", "AI Workers"];
+
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#FAF7F2] text-[#2A1E18]">
@@ -107,6 +128,7 @@ export default function Home() {
             <a href="#work" className="transition hover:text-[#8A5A3C]">How I Work</a>
             <a href="#projects" className="transition hover:text-[#8A5A3C]">Projects</a>
             <a href="#ai-workflow" className="transition hover:text-[#8A5A3C]">AI Workflow</a>
+            <a href="#skills-tools" className="transition hover:text-[#8A5A3C]">Skills</a>
             <a href="#experience" className="transition hover:text-[#8A5A3C]">Experience</a>
             <a href="#contact" className="transition hover:text-[#8A5A3C]">Contact</a>
           </div>
@@ -148,10 +170,10 @@ export default function Home() {
             <div className="overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-[#F8F3EC] via-white to-[#E8D6CC]">
               <div className="relative h-[420px]">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#F8F3EC] via-[#E8D6CC] to-[#8A5A3C]" />
-<div className="absolute left-10 top-10 h-40 w-40 rounded-full bg-white/30 blur-2xl" />
-<div className="absolute bottom-10 right-10 h-48 w-48 rounded-full bg-[#2A1E18]/20 blur-3xl" />
-<div className="absolute left-1/4 top-1/4 h-56 w-56 rounded-full bg-white/25 blur-3xl" />
-<div className="absolute right-1/4 bottom-1/4 h-64 w-64 rounded-full bg-[#8A5A3C]/25 blur-3xl" />
+                <div className="absolute left-10 top-10 h-40 w-40 rounded-full bg-white/30 blur-2xl" />
+                <div className="absolute bottom-10 right-10 h-48 w-48 rounded-full bg-[#2A1E18]/20 blur-3xl" />
+                <div className="absolute left-1/4 top-1/4 h-56 w-56 rounded-full bg-white/25 blur-3xl" />
+                <div className="absolute right-1/4 bottom-1/4 h-64 w-64 rounded-full bg-[#8A5A3C]/25 blur-3xl" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#2A1E18]/60 via-[#2A1E18]/15 to-transparent" />
 
                 <div className="absolute bottom-0 left-0 right-0 p-7 text-white">
@@ -260,6 +282,67 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="skills-tools" className="animate-fade-up mx-auto max-w-7xl px-6 py-16">
+        <div className="mb-10 max-w-3xl">
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">
+            Skills & Tools
+          </p>
+          <h2 className="mt-3 text-4xl font-semibold">
+            Kompetencje łączące marketing, organizację i digital.
+          </h2>
+          <p className="mt-5 leading-7 text-[#7A665A]">
+            Zestaw umiejętności Joanny obejmuje praktyczny marketing operacyjny, komunikację,
+            content, koordynację projektów oraz coraz mocniejsze wykorzystanie narzędzi AI w codziennej pracy.
+          </p>
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="grid gap-5 sm:grid-cols-2">
+            {skillGroups.map((group) => (
+              <article
+                key={group.title}
+                className="rounded-[2rem] border border-[#8A5A3C]/15 bg-white/65 p-7 shadow-xl shadow-[#8A5A3C]/5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/80 hover:shadow-2xl hover:shadow-[#8A5A3C]/10"
+              >
+                <h3 className="text-xl font-semibold">{group.title}</h3>
+                <ul className="mt-5 space-y-3 text-sm leading-6 text-[#7A665A]">
+                  {group.items.map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#8A5A3C]/60" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+
+          <aside className="rounded-[2.2rem] border border-[#8A5A3C]/15 bg-gradient-to-br from-white/80 via-[#F8F3EC]/90 to-[#E8D6CC]/70 p-7 shadow-2xl shadow-[#8A5A3C]/10 backdrop-blur">
+            <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">
+              Tool stack
+            </p>
+            <h3 className="mt-3 text-3xl font-semibold">Narzędzia w codziennej pracy.</h3>
+            <div className="mt-7 flex flex-wrap gap-3">
+              {tools.map((tool) => (
+                <span
+                  key={tool}
+                  className="rounded-full border border-[#8A5A3C]/15 bg-white/70 px-4 py-2 text-sm text-[#7A665A] shadow-sm transition hover:-translate-y-0.5 hover:bg-white"
+                >
+                  {tool}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-8 rounded-[1.5rem] bg-white/55 p-5">
+              <p className="text-sm font-semibold text-[#8A5A3C]">Najmocniejsze połączenie</p>
+              <p className="mt-2 leading-7 text-[#7A665A]">
+                komunikacja + organizacja + content + AI-assisted workflow — czyli praktyczne wsparcie
+                projektów marketingowych od struktury po wdrożenie.
+              </p>
+            </div>
+          </aside>
         </div>
       </section>
 

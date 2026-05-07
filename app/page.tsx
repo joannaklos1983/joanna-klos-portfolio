@@ -85,6 +85,8 @@ const steps = [
   ["04", "AI workflows", "Research, automatyzacja, prompt workflows, AI agents i prototypowanie."],
 ];
 
+const process = ["Research", "Structure", "Create", "Publish", "Improve"];
+
 const workflow = [
   ["01", "Research & Analysis", "Analiza rynku, odbiorców, komunikacji i benchmarków."],
   ["02", "Content Structuring", "Porządkowanie informacji, upraszczanie treści oraz projektowanie struktury stron i materiałów."],
@@ -105,7 +107,7 @@ const skillGroups = [
   },
   {
     title: "Project & Operations",
-    items: ["koordynacja projektów", "organizacja pracy", "raportowanie", "analiza działań", "usprawnianie procesów", "praca międzydziałowa"],
+    items: ["koordynacja projektów", "organizacja pracy", "koordynacja eventów", "raportowanie", "analiza działań", "usprawnianie procesów", "praca międzydziałowa"],
   },
   {
     title: "AI & Prototyping",
@@ -162,7 +164,7 @@ export default function Home() {
             <a href="#experience" className="rounded-full border border-[#8A5A3C]/20 bg-white/60 px-6 py-3 text-sm font-medium transition hover:-translate-y-0.5 hover:border-[#8A5A3C]/35 hover:bg-white/80">
               View Experience
             </a>
-            <a href="#" className="rounded-full border border-[#8A5A3C]/20 bg-white/40 px-6 py-3 text-sm font-medium text-[#7A665A] transition hover:-translate-y-0.5 hover:bg-white/70">
+            <a href="/CV_Joanna_Klos.pdf" className="rounded-full border border-[#8A5A3C]/20 bg-white/40 px-6 py-3 text-sm font-medium text-[#7A665A] transition hover:-translate-y-0.5 hover:bg-white/70">
               Download CV
             </a>
           </div>
@@ -228,6 +230,27 @@ export default function Home() {
               <p className="mt-3 text-sm leading-6 text-[#7A665A]">{keepTogether(desc)}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="animate-fade-up mx-auto max-w-7xl px-6 py-10">
+        <div className="rounded-[2rem] border border-[#8A5A3C]/15 bg-white/60 p-5 shadow-xl shadow-[#8A5A3C]/5 backdrop-blur md:p-7">
+          <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+            <div>
+              <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">Process</p>
+              <h2 className="mt-2 text-2xl font-semibold">Od researchu do usprawniania działań.</h2>
+            </div>
+            <div className="flex flex-wrap items-center gap-3">
+              {process.map((item, index) => (
+                <div key={item} className="flex items-center gap-3">
+                  <span className="rounded-full border border-[#8A5A3C]/15 bg-[#FAF7F2]/80 px-4 py-2 text-sm font-medium text-[#7A665A] shadow-sm">
+                    {item}
+                  </span>
+                  {index < process.length - 1 && <span className="text-[#8A5A3C]/40">→</span>}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -417,23 +440,49 @@ export default function Home() {
       </section>
 
       <section id="contact" className="animate-fade-up mx-auto max-w-7xl px-6 py-20">
-        <div className="rounded-[2.5rem] border border-[#8A5A3C]/15 bg-gradient-to-br from-white/80 via-[#F8F3EC]/90 to-[#E8D6CC]/70 p-10 text-center shadow-2xl shadow-[#8A5A3C]/10 backdrop-blur md:p-16">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">
-            Contact
-          </p>
-          <h2 className="mx-auto mt-4 max-w-3xl text-4xl font-semibold md:text-5xl">
-            Let’s build better communication & digital experiences.
-          </h2>
-          <p className="mx-auto mt-5 max-w-2xl leading-7 text-[#7A665A]">
-            {keepTogether("Strategia, komunikacja, AI i projekty webowe w jasnej, profesjonalnej formule personal brand.")}
-          </p>
-          <div className="mt-8">
-            <a
-              href="mailto:"
-              className="rounded-full bg-[#8A5A3C] px-7 py-3 text-sm font-medium text-white shadow-lg shadow-[#8A5A3C]/20 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#8A5A3C]/25"
-            >
-              Contact
-            </a>
+        <div className="rounded-[2.5rem] border border-[#8A5A3C]/15 bg-gradient-to-br from-white/80 via-[#F8F3EC]/90 to-[#E8D6CC]/70 p-10 shadow-2xl shadow-[#8A5A3C]/10 backdrop-blur md:p-16">
+          <div className="grid gap-10 md:grid-cols-[1fr_0.9fr] md:items-center">
+            <div>
+              <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">Contact</p>
+              <h2 className="mt-4 max-w-3xl text-4xl font-semibold md:text-5xl">
+                Let’s build better communication & digital experiences.
+              </h2>
+              <p className="mt-5 max-w-2xl leading-7 text-[#7A665A]">
+                {keepTogether("Open to marketing, communication, AI-assisted content, project coordination and event coordination roles.")}
+              </p>
+            </div>
+
+            <div className="rounded-[2rem] border border-[#8A5A3C]/15 bg-white/65 p-6 shadow-xl shadow-[#8A5A3C]/5 backdrop-blur">
+              <div className="space-y-4 text-sm">
+                <a className="block rounded-2xl bg-[#FAF7F2]/80 p-4 text-[#2A1E18] transition hover:bg-white" href="mailto:joanna.klos1983@gmail.com">
+                  <span className="block text-xs uppercase tracking-[0.2em] text-[#8A5A3C]">Email</span>
+                  joanna.klos1983@gmail.com
+                </a>
+                <a className="block rounded-2xl bg-[#FAF7F2]/80 p-4 text-[#2A1E18] transition hover:bg-white" href="tel:+48667166633">
+                  <span className="block text-xs uppercase tracking-[0.2em] text-[#8A5A3C]">Phone</span>
+                  667 166 633
+                </a>
+                <a className="block rounded-2xl bg-[#FAF7F2]/80 p-4 text-[#2A1E18] transition hover:bg-white" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+                  <span className="block text-xs uppercase tracking-[0.2em] text-[#8A5A3C]">LinkedIn</span>
+                  Add LinkedIn profile link
+                </a>
+              </div>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a
+                  href="mailto:joanna.klos1983@gmail.com"
+                  className="rounded-full bg-[#8A5A3C] px-6 py-3 text-sm font-medium text-white shadow-lg shadow-[#8A5A3C]/20 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#8A5A3C]/25"
+                >
+                  Contact me
+                </a>
+                <a
+                  href="/CV_Joanna_Klos.pdf"
+                  className="rounded-full border border-[#8A5A3C]/20 bg-white/60 px-6 py-3 text-sm font-medium text-[#7A665A] transition hover:-translate-y-0.5 hover:bg-white"
+                >
+                  Download CV
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

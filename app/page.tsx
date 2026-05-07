@@ -21,7 +21,8 @@ const experience = [
     company: "PPHU Specjał Sp. z o.o.",
     role: "Asystentka w Biurze Zarządu",
     period: "październik 2024 – luty 2026",
-    focus: "Koordynacja administracyjna, wsparcie projektów międzydziałowych i organizacja pracy biura zarządu.",
+    years: "2024–2026",
+    focus: "Koordynacja administracyjna, wsparcie projektów międzydziałowych oraz organizacja pracy biura zarządu.",
     details: [
       "Koordynacja działań administracyjnych i organizacyjnych biura zarządu: terminy, priorytety i obieg dokumentów.",
       "Wsparcie projektów międzydziałowych oraz organizacja spotkań i wydarzeń wewnętrznych.",
@@ -34,7 +35,8 @@ const experience = [
     company: "Ideo Sp. z o.o.",
     role: "Specjalistka ds. Wizerunku Pracodawcy",
     period: "czerwiec 2017 – październik 2024",
-    focus: "Marketing operacyjny, komunikacja employer branding, treści online/offline, CMS i wydarzenia firmowe.",
+    years: "2017–2024",
+    focus: "Marketing operacyjny, komunikacja employer branding, treści online/offline, CMS oraz wydarzenia firmowe.",
     details: [
       "Koordynacja działań marketingowych w obszarze komunikacji i materiałów.",
       "Tworzenie i redakcja materiałów marketingowych online/offline: prezentacje, treści i materiały promocyjne.",
@@ -49,7 +51,8 @@ const experience = [
     company: "Grupa Inditex",
     role: "Menedżerka salonu firmowego",
     period: "sierpień 2011 – kwiecień 2014",
-    focus: "Zarządzanie zespołem, standard obsługi, komunikacja operacyjna i wdrażanie pracowników.",
+    years: "2011–2014",
+    focus: "Zarządzanie zespołem, standard obsługi, komunikacja operacyjna oraz wdrażanie pracowników.",
     details: [
       "Koordynacja pracy salonu i zespołu: organizacja, standardy i terminowość.",
       "Dbanie o spójny wizerunek oraz standard obsługi zgodny z wymaganiami marki.",
@@ -62,7 +65,8 @@ const experience = [
     company: "Trend & Fashion Group Sp. z o.o.",
     role: "Koordynator Regionalny",
     period: "grudzień 2007 – sierpień 2011",
-    focus: "Koordynacja regionalna, standardy operacyjne, działania promocyjne i raportowanie wyników.",
+    years: "2007–2011",
+    focus: "Koordynacja regionalna, standardy operacyjne, działania promocyjne oraz raportowanie wyników.",
     details: [
       "Koordynacja działań operacyjnych i standardów w salonach w regionie.",
       "Nadzór nad spójnością działań promocyjnych i jakością obsługi.",
@@ -111,6 +115,8 @@ const skillGroups = [
 
 const tools = ["MS Office", "Canva", "Asana", "CMS / WordPress", "CapCut", "ChatGPT", "Claude", "Claude Code", "Cursor", "v0", "GitHub", "Vercel", "Codeck", "AI Workers"];
 
+const keepTogether = (text: string) => text.replace(/\s([aiouwz])\s/gi, " $1\u00A0");
+
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#FAF7F2] text-[#2A1E18]">
@@ -146,10 +152,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[#7A665A]">
-            Łączę doświadczenie w marketingu operacyjnym, komunikacji i koordynacji projektów
-            z praktycznym wykorzystaniem AI oraz narzędzi cyfrowych. Tworzę i porządkuję
-            komunikację, projektuję struktury treści, wspieram działania marketingowe i rozwijam
-            prototypy stron oraz aplikacji.
+            {keepTogether("Łączę doświadczenie w marketingu operacyjnym, komunikacji i koordynacji projektów z praktycznym wykorzystaniem AI oraz narzędzi cyfrowych. Tworzę i porządkuję komunikację, projektuję struktury treści, wspieram działania marketingowe i rozwijam prototypy stron oraz aplikacji.")}
           </p>
 
           <div className="mt-9 flex flex-wrap gap-4">
@@ -186,8 +189,7 @@ export default function Home() {
                   </h2>
 
                   <p className="mt-3 max-w-md text-sm leading-6 text-[#F8F3EC]/90">
-                    Strategia, treść, narzędzia AI i prototypowanie — połączone w jeden
-                    praktyczny workflow dla marek, projektów i komunikacji digital.
+                    {keepTogether("Strategia, treść, narzędzia AI i prototypowanie — połączone w jeden praktyczny workflow dla marek, projektów i komunikacji digital.")}
                   </p>
                 </div>
               </div>
@@ -223,7 +225,7 @@ export default function Home() {
             >
               <span className="text-sm font-semibold text-[#8A5A3C]">{nr}</span>
               <h3 className="mt-5 text-xl font-semibold">{title}</h3>
-              <p className="mt-3 text-sm leading-6 text-[#7A665A]">{desc}</p>
+              <p className="mt-3 text-sm leading-6 text-[#7A665A]">{keepTogether(desc)}</p>
             </div>
           ))}
         </div>
@@ -247,7 +249,7 @@ export default function Home() {
                 {project.tag}
               </span>
               <h3 className="mt-8 text-2xl font-semibold">{project.title}</h3>
-              <p className="mt-4 leading-7 text-[#7A665A]">{project.desc}</p>
+              <p className="mt-4 leading-7 text-[#7A665A]">{keepTogether(project.desc)}</p>
             </article>
           ))}
         </div>
@@ -264,8 +266,7 @@ export default function Home() {
                 Marketing, treść i prototypowanie wspierane przez AI.
               </h2>
               <p className="mt-5 leading-7 text-[#7A665A]">
-                Wykorzystuję AI jako praktyczne wsparcie w analizie, strukturze treści,
-                tworzeniu komunikacji, prototypowaniu stron i aplikacji oraz organizacji pracy projektowej.
+                {keepTogether("Wykorzystuję AI jako praktyczne wsparcie w analizie, strukturze treści, tworzeniu komunikacji, prototypowaniu stron i aplikacji oraz organizacji pracy projektowej.")}
               </p>
             </div>
 
@@ -277,7 +278,7 @@ export default function Home() {
                 >
                   <span className="text-sm font-semibold text-[#8A5A3C]">{nr}</span>
                   <h3 className="mt-4 text-xl font-semibold">{title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-[#7A665A]">{desc}</p>
+                  <p className="mt-3 text-sm leading-6 text-[#7A665A]">{keepTogether(desc)}</p>
                 </div>
               ))}
             </div>
@@ -294,8 +295,7 @@ export default function Home() {
             Kompetencje łączące marketing, organizację i digital.
           </h2>
           <p className="mt-5 leading-7 text-[#7A665A]">
-            Zestaw umiejętności Joanny obejmuje praktyczny marketing operacyjny, komunikację,
-            content, koordynację projektów oraz coraz mocniejsze wykorzystanie narzędzi AI w codziennej pracy.
+            {keepTogether("Zestaw umiejętności Joanny obejmuje praktyczny marketing operacyjny, komunikację, content, koordynację projektów oraz coraz mocniejsze wykorzystanie narzędzi AI w codziennej pracy.")}
           </p>
         </div>
 
@@ -311,7 +311,7 @@ export default function Home() {
                   {group.items.map((item) => (
                     <li key={item} className="flex gap-3">
                       <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#8A5A3C]/60" />
-                      <span>{item}</span>
+                      <span>{keepTogether(item)}</span>
                     </li>
                   ))}
                 </ul>
@@ -338,8 +338,7 @@ export default function Home() {
             <div className="mt-8 rounded-[1.5rem] bg-white/55 p-5">
               <p className="text-sm font-semibold text-[#8A5A3C]">Najmocniejsze połączenie</p>
               <p className="mt-2 leading-7 text-[#7A665A]">
-                komunikacja + organizacja + content + AI-assisted workflow — czyli praktyczne wsparcie
-                projektów marketingowych od struktury po wdrożenie.
+                {keepTogether("komunikacja + organizacja + content + AI-assisted workflow — czyli praktyczne wsparcie projektów marketingowych od struktury po wdrożenie.")}
               </p>
             </div>
           </aside>
@@ -352,28 +351,37 @@ export default function Home() {
         </p>
         <h2 className="mt-3 text-4xl font-semibold">Doświadczenie zawodowe.</h2>
         <p className="mt-4 max-w-3xl leading-7 text-[#7A665A]">
-          Timeline pokazuje rozwój od koordynacji operacyjnej i zarządzania zespołem do marketingu,
-          komunikacji, CMS, contentu, eventów oraz wsparcia projektów organizacyjnych.
+          {keepTogether("Timeline pokazuje rozwój od koordynacji operacyjnej i zarządzania zespołem do marketingu, komunikacji, CMS, contentu, eventów oraz wsparcia projektów organizacyjnych.")}
         </p>
 
-        <div className="relative mt-12 space-y-8 before:absolute before:left-4 before:top-2 before:h-full before:w-px before:bg-[#8A5A3C]/20 md:before:left-1/2">
-          {experience.map((item, index) => (
+        <div className="mt-12 space-y-6">
+          {experience.map((item) => (
             <article
               key={item.company}
-              className={`relative grid gap-6 md:grid-cols-2 ${index % 2 === 0 ? "md:[&>div]:col-start-2" : ""}`}
+              className="group grid gap-5 rounded-[2rem] border border-[#8A5A3C]/15 bg-white/65 p-5 shadow-xl shadow-[#8A5A3C]/5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/80 hover:shadow-2xl hover:shadow-[#8A5A3C]/10 md:grid-cols-[170px_1fr] md:p-7"
             >
-              <div className="absolute left-4 top-8 z-10 h-4 w-4 -translate-x-1/2 rounded-full border-4 border-[#FAF7F2] bg-[#8A5A3C] shadow-lg md:left-1/2" />
+              <div className="flex items-start gap-4 md:block">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#8A5A3C] text-sm font-semibold text-white shadow-lg shadow-[#8A5A3C]/20 md:h-16 md:w-16">
+                  {item.years.split("–")[0]}
+                </div>
+                <div className="md:mt-5">
+                  <p className="text-sm font-semibold text-[#8A5A3C]">{item.years}</p>
+                  <p className="mt-1 text-xs leading-5 text-[#7A665A]">{item.period}</p>
+                </div>
+              </div>
 
-              <div className="ml-10 rounded-[2rem] border border-[#8A5A3C]/15 bg-white/65 p-7 shadow-xl shadow-[#8A5A3C]/5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/80 hover:shadow-2xl hover:shadow-[#8A5A3C]/10 md:ml-0">
-                <div className="flex flex-wrap items-center gap-3">
-                  <span className="rounded-full bg-[#E8D6CC]/70 px-3 py-1 text-xs font-medium text-[#8A5A3C]">
-                    {item.period}
+              <div>
+                <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                  <div>
+                    <h3 className="text-2xl font-semibold">{item.role}</h3>
+                    <p className="mt-1 font-medium text-[#8A5A3C]">{item.company}</p>
+                  </div>
+                  <span className="w-fit rounded-full bg-[#E8D6CC]/70 px-3 py-1 text-xs font-medium text-[#8A5A3C]">
+                    career step
                   </span>
                 </div>
 
-                <h3 className="mt-5 text-2xl font-semibold">{item.role}</h3>
-                <p className="mt-1 font-medium text-[#8A5A3C]">{item.company}</p>
-                <p className="mt-4 leading-7 text-[#7A665A]">{item.focus}</p>
+                <p className="mt-5 max-w-3xl leading-7 text-[#7A665A]">{keepTogether(item.focus)}</p>
 
                 <div className="mt-5 flex flex-wrap gap-2">
                   {item.tags.map((tag) => (
@@ -386,18 +394,18 @@ export default function Home() {
                   ))}
                 </div>
 
-                <details className="group mt-6">
+                <details className="group/details mt-6">
                   <summary className="cursor-pointer list-none text-sm font-semibold text-[#8A5A3C] transition hover:text-[#2A1E18]">
                     <span className="inline-flex items-center gap-2 rounded-full border border-[#8A5A3C]/20 bg-white/60 px-4 py-2">
                       Zobacz zakres obowiązków
-                      <span className="transition group-open:rotate-45">+</span>
+                      <span className="transition group-open/details:rotate-45">+</span>
                     </span>
                   </summary>
-                  <ul className="mt-5 space-y-3 text-sm leading-6 text-[#7A665A]">
+                  <ul className="mt-5 grid gap-3 text-sm leading-6 text-[#7A665A] md:grid-cols-2">
                     {item.details.map((detail) => (
                       <li key={detail} className="flex gap-3">
                         <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#8A5A3C]/60" />
-                        <span>{detail}</span>
+                        <span>{keepTogether(detail)}</span>
                       </li>
                     ))}
                   </ul>
@@ -417,7 +425,7 @@ export default function Home() {
             Let’s build better communication & digital experiences.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl leading-7 text-[#7A665A]">
-            Strategia, komunikacja, AI i projekty webowe w jasnej, profesjonalnej formule personal brand.
+            {keepTogether("Strategia, komunikacja, AI i projekty webowe w jasnej, profesjonalnej formule personal brand.")}
           </p>
           <div className="mt-8">
             <a

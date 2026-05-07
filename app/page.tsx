@@ -583,9 +583,6 @@ export default function Home() {
         </p>
 
         <div className="relative mt-12 space-y-8 pl-8 before:absolute before:left-[30px] before:top-4 before:h-[calc(100%-2rem)] before:w-px before:bg-gradient-to-b before:from-[#8A5A3C]/10 before:via-[#8A5A3C]/45 before:to-[#8A5A3C]/10 md:pl-12">
-          <div className="absolute left-0 top-0 hidden -rotate-90 text-[10px] font-semibold uppercase tracking-[0.35em] text-[#8A5A3C]/40 md:block">
-            career journey
-          </div>
 
           {experience.map((item) => (
             <article

@@ -1,18 +1,23 @@
 const projects = [
   {
     title: "MIA-STOP HD",
-    desc: "UX komunikacji, upraszczanie treści, AI-assisted workflows.",
-    tag: "Health / Communication",
-  },
-  {
-    title: "UpRent",
-    desc: "Strategia marketplace, analiza rynku, model biznesowy, KPI, UX komunikacji.",
-    tag: "Marketplace Strategy",
+    desc: "Upraszczanie komunikacji specjalistycznej: struktura treści, język korzyści, materiały informacyjne i wsparcie AI.",
+    tag: "Specialist communication",
   },
   {
     title: "AI & Web Projects",
-    desc: "Landing page’e, proste aplikacje, GitHub, Vercel, Claude Code, Cursor, v0, AI agents.",
-    tag: "AI / Web",
+    desc: "Proste strony, landing page’e i prototypy aplikacji. Struktura treści, UX komunikacji, GitHub, Vercel i narzędzia AI.",
+    tag: "AI / Web / Digital",
+  },
+  {
+    title: "UpRent",
+    desc: "Koncepcja strategiczna marketplace’u lokalnego: odbiorcy, propozycja wartości, model komunikacji i kierunek marki.",
+    tag: "Strategy concept",
+  },
+  {
+    title: "Internal Communication",
+    desc: "Treści do komunikacji wewnętrznej, systemów intranetowych, CMS, materiałów informacyjnych i komunikatów organizacyjnych.",
+    tag: "Internal comms",
   },
 ];
 
@@ -213,27 +218,13 @@ export default function Home() {
           </a>
 
           <div className="hidden gap-8 text-sm text-[#7A665A] md:flex">
-            <a href="#work" className="transition hover:text-[#8A5A3C]">
-              How I Work
-            </a>
-            <a href="#projects" className="transition hover:text-[#8A5A3C]">
-              Projects
-            </a>
-            <a href="#ai-workflow" className="transition hover:text-[#8A5A3C]">
-              AI Workflow
-            </a>
-            <a href="#skills-tools" className="transition hover:text-[#8A5A3C]">
-              Skills
-            </a>
-            <a href="#education" className="transition hover:text-[#8A5A3C]">
-              Education
-            </a>
-            <a href="#experience" className="transition hover:text-[#8A5A3C]">
-              Experience
-            </a>
-            <a href="#contact" className="transition hover:text-[#8A5A3C]">
-              Contact
-            </a>
+            <a href="#work" className="transition hover:text-[#8A5A3C]">How I Work</a>
+            <a href="#projects" className="transition hover:text-[#8A5A3C]">Work Areas</a>
+            <a href="#ai-workflow" className="transition hover:text-[#8A5A3C]">AI Workflow</a>
+            <a href="#skills-tools" className="transition hover:text-[#8A5A3C]">Skills</a>
+            <a href="#education" className="transition hover:text-[#8A5A3C]">Education</a>
+            <a href="#experience" className="transition hover:text-[#8A5A3C]">Experience</a>
+            <a href="#contact" className="transition hover:text-[#8A5A3C]">Contact</a>
           </div>
         </div>
       </nav>
@@ -255,22 +246,13 @@ export default function Home() {
           </p>
 
           <div className="mt-9 flex flex-wrap gap-4">
-            <a
-              href="#projects"
-              className="rounded-full bg-[#8A5A3C] px-6 py-3 text-sm font-medium text-white shadow-lg shadow-[#8A5A3C]/20 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#8A5A3C]/25"
-            >
-              Explore Projects
+            <a href="#projects" className="rounded-full bg-[#8A5A3C] px-6 py-3 text-sm font-medium text-white shadow-lg shadow-[#8A5A3C]/20 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#8A5A3C]/25">
+              Explore Work Areas
             </a>
-            <a
-              href="#experience"
-              className="rounded-full border border-[#8A5A3C]/20 bg-white/60 px-6 py-3 text-sm font-medium transition hover:-translate-y-0.5 hover:border-[#8A5A3C]/35 hover:bg-white/80"
-            >
+            <a href="#experience" className="rounded-full border border-[#8A5A3C]/20 bg-white/60 px-6 py-3 text-sm font-medium transition hover:-translate-y-0.5 hover:border-[#8A5A3C]/35 hover:bg-white/80">
               View Experience
             </a>
-            <a
-              href="/CV_Joanna_Klos.pdf"
-              className="rounded-full border border-[#8A5A3C]/20 bg-white/40 px-6 py-3 text-sm font-medium text-[#7A665A] transition hover:-translate-y-0.5 hover:bg-white/70"
-            >
+            <a href="/CV_Joanna_Klos.pdf" className="rounded-full border border-[#8A5A3C]/20 bg-white/40 px-6 py-3 text-sm font-medium text-[#7A665A] transition hover:-translate-y-0.5 hover:bg-white/70">
               Download CV
             </a>
           </div>
@@ -306,10 +288,7 @@ export default function Home() {
 
               <div className="grid grid-cols-2 gap-3 p-5">
                 {skills.map((skill) => (
-                  <div
-                    key={skill}
-                    className="rounded-2xl bg-white/80 px-4 py-3 text-sm shadow-sm transition hover:-translate-y-0.5 hover:bg-white"
-                  >
+                  <div key={skill} className="rounded-2xl bg-white/80 px-4 py-3 text-sm shadow-sm transition hover:-translate-y-0.5 hover:bg-white">
                     {skill}
                   </div>
                 ))}
@@ -318,8 +297,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <section id="work" className="animate-fade-up mx-auto max-w-7xl px-6 py-16">
+            <section id="work" className="animate-fade-up mx-auto max-w-7xl px-6 py-16">
         <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">
           How I Work
         </p>
@@ -373,23 +351,28 @@ export default function Home() {
 
       <section id="projects" className="animate-fade-up mx-auto max-w-7xl px-6 py-16">
         <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">
-          Projects
+          Selected Work Areas
         </p>
         <h2 className="mt-3 text-4xl font-semibold">
-          Wybrane projekty i kierunki rozwoju.
+          Komunikacja, struktura treści i narzędzia digital.
         </h2>
+        <p className="mt-5 max-w-3xl leading-7 text-[#7A665A]">
+          {keepTogether(
+            "Obszary, w których łączę komunikację, strukturę treści, organizację i narzędzia digital."
+          )}
+        </p>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-4">
           {projects.map((project) => (
             <article
               key={project.title}
-              className="rounded-[2rem] border border-[#8A5A3C]/15 bg-white/65 p-7 shadow-xl shadow-[#8A5A3C]/5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-[#8A5A3C]/25 hover:bg-white/80 hover:shadow-2xl hover:shadow-[#8A5A3C]/10"
+              className="rounded-[2rem] border border-[#8A5A3C]/15 bg-white/65 p-6 shadow-xl shadow-[#8A5A3C]/5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-[#8A5A3C]/25 hover:bg-white/80 hover:shadow-2xl hover:shadow-[#8A5A3C]/10"
             >
               <span className="rounded-full bg-[#E8D6CC]/70 px-3 py-1 text-xs font-medium text-[#8A5A3C]">
                 {project.tag}
               </span>
-              <h3 className="mt-8 text-2xl font-semibold">{project.title}</h3>
-              <p className="mt-4 leading-7 text-[#7A665A]">
+              <h3 className="mt-7 text-xl font-semibold">{project.title}</h3>
+              <p className="mt-4 text-sm leading-6 text-[#7A665A]">
                 {keepTogether(project.desc)}
               </p>
             </article>
@@ -583,7 +566,6 @@ export default function Home() {
         </p>
 
         <div className="relative mt-12 space-y-8 pl-8 before:absolute before:left-[30px] before:top-4 before:h-[calc(100%-2rem)] before:w-px before:bg-gradient-to-b before:from-[#8A5A3C]/10 before:via-[#8A5A3C]/45 before:to-[#8A5A3C]/10 md:pl-12">
-
           {experience.map((item) => (
             <article
               key={item.company}

@@ -8,52 +8,89 @@ function keepTogether(text: string) {
 
 export default function Home() {
   const steps: [string, string, string][] = [
-    ["01", "Poznaję biznes", "Sprawdzam, co firma chce komunikować i gdzie pojawia się chaos lub brak spójności."],
-    ["02", "Upraszczam przekaz", "Porządkuję treści i komunikację tak, żeby klient szybciej rozumiał ofertę."],
-    ["03", "Tworzę materiały", "Przygotowuję treści, strony i materiały wspierające komunikację marki."],
-    ["04", "Wdrażam i usprawniam", "Publikuję treści, organizuję działania i szukam prostszych rozwiązań usprawniających komunikację."],
+    ["01", "Analizuję i porządkuję", "Poznaję markę, ofertę i sposób komunikacji, żeby znaleźć miejsca, w których przekaz staje się niespójny lub nieczytelny."],
+    ["02", "Buduję strukturę komunikacji", "Układam komunikację tak, aby marka była bardziej zrozumiała, spójna i łatwiejsza do rozwijania w różnych kanałach."],
+    ["03", "Tworzę i wdrażam", "Przygotowuję strony, treści, materiały i elementy komunikacji wspierające codzienne działania marketingowe."],
+    ["04", "Usprawniam procesy", "Łączę marketing z organizacją pracy, szukając prostszych rozwiązań i bardziej uporządkowanego sposobu działania."],
   ];
 
   const process = ["Poznaję", "Upraszczam", "Tworzę", "Wdrażam", "Usprawniam"];
 
   const projects = [
     {
-      tag: "Marketing & Communication",
-      title: "Marketing i komunikacja",
-      desc: "Pomagam planować i porządkować działania marketingowe oraz komunikację marki — od treści po organizację działań.",
+      tag: "Strategia komunikacji",
+      title: "Strategia komunikacji",
+      desc: "Porządkowanie przekazu marki, kierunku komunikacji oraz struktury działań marketingowych.",
     },
     {
-      tag: "Content & WWW",
-      title: "Treści i strony WWW",
-      desc: "Tworzę i aktualizuję treści na strony WWW, dbając o ich czytelność, spójność i prosty przekaz.",
+      tag: "Strony WWW i treści",
+      title: "Strony WWW i treści",
+      desc: "Tworzenie i rozwijanie stron, treści oraz materiałów wspierających obecność marki online.",
     },
     {
-      tag: "Events & Organization",
-      title: "Organizacja działań i eventów",
-      desc: "Organizuję wydarzenia, wspieram działania promocyjne i dbam o sprawny przebieg projektów.",
+      tag: "Marketing operacyjny",
+      title: "Marketing operacyjny",
+      desc: "Koordynacja działań marketingowych, organizacja procesów i wsparcie codziennej komunikacji marki.",
     },
     {
-      tag: "AI & Tools",
-      title: "AI i nowoczesne narzędzia",
-      desc: "Korzystam z AI do porządkowania treści, researchu i usprawniania codziennej pracy marketingowej.",
+      tag: "Komunikacja EB",
+      title: "Komunikacja employer brandingowa",
+      desc: "Wsparcie komunikacji wewnętrznej i wizerunkowej, obsługa systemów kafeteryjnych, materiałów employer brandingowych oraz działań wspierających doświadczenie pracowników.",
+    },
+    {
+      tag: "Materiały i identyfikacja",
+      title: "Materiały i identyfikacja wizualna",
+      desc: "Dbanie o spójność komunikacji wizualnej oraz przygotowanie materiałów wspierających markę online i offline.",
+    },
+    {
+      tag: "Projekty specjalne",
+      title: "Projekty i działania specjalne",
+      desc: "Wsparcie projektów wymagających połączenia komunikacji, organizacji i strategicznego podejścia.",
     },
   ];
 
   const workflow: [string, string, string][] = [
-    ["01", "Organizacja informacji", "Korzystam z AI do porządkowania informacji i organizacji pracy."],
-    ["02", "Tworzenie treści", "AI pomaga mi szybciej tworzyć i porządkować treści."],
-    ["03", "Usprawnianie pracy", "Korzystam z AI, żeby znajdować prostsze rozwiązania i usprawniać codzienne zadania."],
-    ["04", "Wnioski i organizacja", "AI wspiera mnie w wyciąganiu wniosków i organizacji działań."],
+    ["01", "Organizacja i analiza informacji", "Wykorzystuję AI do porządkowania informacji, researchu oraz analizy komunikacji i materiałów marketingowych."],
+    ["02", "Tworzenie struktur i prototypów", "Buduję szkice stron, koncepcje komunikacji, struktury treści i pierwsze wersje rozwiązań projektowych."],
+    ["03", "Automatyzacja i usprawnianie pracy", "Testuję rozwiązania usprawniające codzienną pracę marketingową, organizację treści i zarządzanie informacją."],
+    ["04", "Interaktywne projekty i narzędzia", "Rozwijam interaktywne portfolio oraz eksperymentuję z rozwiązaniami łączącymi komunikację, UX i AI."],
+    ["05", "AI jako element procesu projektowego", "Traktuję AI jako narzędzie wspierające analizę, organizację i tworzenie rozwiązań — nie jako zamiennik myślenia strategicznego."],
   ];
 
-  const helpItems = [
-    "Uporządkowanie komunikacji marki i oferty",
-    "Treści na strony WWW i materiały promocyjne",
-    "Prostsze przedstawienie usług i produktów",
-    "Organizacja działań marketingowych",
-    "Wsparcie komunikacji przy starcie biznesu",
-    "Content i materiały do social media",
-    "Wykorzystanie AI do usprawnienia codziennej pracy",
+  const selectedProjects = [
+    {
+      title: "MIA-STOP HD",
+      desc: "Komunikacja i struktura treści dla projektu wspierającego pacjentów hemodializowanych.",
+      points: [
+        "analiza potrzeb użytkowników",
+        "uproszczenie komunikacji medycznej",
+        "struktura komunikacji i treści",
+        "organizacja materiałów edukacyjnych",
+        "wykorzystanie AI do pracy nad treściami i komunikacją",
+      ],
+    },
+    {
+      title: "UpRent",
+      desc: "Strategia komunikacji i model marketingowy dla lokalnej platformy marketplace.",
+      points: [
+        "strategia marki i komunikacji",
+        "pozycjonowanie projektu",
+        "struktura przekazu i komunikacji",
+        "marketing launch thinking",
+        "projektowanie doświadczenia użytkownika",
+      ],
+    },
+    {
+      title: "Komunikacja employer brandingowa",
+      desc: "Wsparcie działań employer brandingowych i komunikacji wewnętrznej.",
+      points: [
+        "organizacja materiałów komunikacyjnych",
+        "obsługa systemów kafeteryjnych",
+        "komunikacja wydarzeń i inicjatyw firmowych",
+        "współpraca przy działaniach wspierających doświadczenie pracowników",
+        "koordynacja treści i materiałów marketingowych",
+      ],
+    },
   ];
 
   const education = [
@@ -96,20 +133,18 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-br from-[#FAF7F2] via-[#F0E8DC] to-[#E8D6CC] font-sans text-[#2A1E18] antialiased">
       <section className="mx-auto max-w-7xl px-6 py-20 md:py-32">
         <div className="text-center">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">Portfolio 2026</p>
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">Strategia • komunikacja • projekty cyfrowe</p>
           <h1 className="mt-4 text-5xl font-bold leading-tight md:text-7xl">Joanna Kłos</h1>
-          <p className="mt-6 text-xl text-[#7A665A] md:text-2xl">
-            Strategia komunikacji • Marketing • Treści • Projekty cyfrowe
-          </p>
           <p className="mt-6 mx-auto max-w-3xl text-base leading-relaxed text-[#7A665A]">
-            Pomagam uporządkować treści, komunikację i podstawy marketingu tak, żeby oferta była prostsza, bardziej czytelna i łatwiejsza do pokazania klientom.
+            Łączę strategię, komunikację i wykonanie, pomagając firmom budować spójną obecność marki — od struktury przekazu po materiały, strony
+            i działania marketingowe.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a href="#services" className="inline-block rounded-full bg-[#8A5A3C] px-8 py-4 text-sm font-medium text-white shadow-lg transition hover:shadow-xl" style={{backgroundColor: '#8A5A3C'}}>
-              Czym się zajmuję
+              Zobacz obszary współpracy
             </a>
-            <a href="#work" className="rounded-full border border-[#8A5A3C]/20 bg-white/60 px-8 py-4 text-sm font-medium text-[#7A665A] transition hover:-translate-y-0.5 hover:bg-white">
-              Jak pracuję
+            <a href="#contact" className="rounded-full border border-[#8A5A3C]/20 bg-white/60 px-8 py-4 text-sm font-medium text-[#7A665A] transition hover:-translate-y-0.5 hover:bg-white">
+              Kontakt
             </a>
           </div>
         </div>
@@ -117,7 +152,10 @@ export default function Home() {
 
       <section id="work" className="mx-auto max-w-7xl px-6 py-16">
         <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">Jak pracuję</p>
-        <h2 className="mt-3 max-w-2xl text-4xl font-semibold">Marketing i komunikacja, które pomagają klientowi szybciej zrozumieć biznes.</h2>
+        <h2 className="mt-3 max-w-2xl text-4xl font-semibold">
+          Marketing i komunikacja oparte na strukturze, spójności
+          i realnych potrzebach biznesu.
+        </h2>
         <div className="mt-10 grid gap-5 md:grid-cols-4">
           {steps.map(([nr, title, desc]) => (
             <div key={title} className="rounded-[1.7rem] border border-[#8A5A3C]/15 bg-white/60 p-6 shadow-xl shadow-[#8A5A3C]/5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-[#8A5A3C]/25 hover:bg-white/75 hover:shadow-2xl hover:shadow-[#8A5A3C]/10">
@@ -149,10 +187,9 @@ export default function Home() {
       </section>
 
       <section id="services" className="mx-auto max-w-7xl px-6 py-16">
-        <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">Obszary kompetencji</p>
-        <h2 className="mt-3 text-4xl font-semibold">Marketing, komunikacja i organizacja.</h2>
-        <p className="mt-5 max-w-3xl leading-7 text-[#7A665A]">{keepTogether("Pomagam uporządkować komunikację, treści i działania marketingowe tak, żeby były bardziej zrozumiałe i łatwiejsze do wdrożenia.")}</p>
-        <div className="mt-10 grid gap-6 md:grid-cols-4">
+        <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">Obszary współpracy</p>
+        <h2 className="mt-3 text-4xl font-semibold">Obszary, w których wspieram marki i projekty.</h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
           {projects.map((project) => (
             <article key={project.title} className="rounded-[2rem] border border-[#8A5A3C]/15 bg-white/65 p-6 shadow-xl shadow-[#8A5A3C]/5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-[#8A5A3C]/25 hover:bg-white/80 hover:shadow-2xl hover:shadow-[#8A5A3C]/10">
               <span className="rounded-full bg-[#E8D6CC]/70 px-3 py-1 text-xs font-medium text-[#8A5A3C]">{project.tag}</span>
@@ -165,37 +202,39 @@ export default function Home() {
 
       <section id="ai-workflow" className="mx-auto max-w-7xl px-6 py-16">
         <div className="rounded-[2.5rem] border border-[#8A5A3C]/15 bg-white/55 p-8 shadow-2xl shadow-[#8A5A3C]/5 backdrop-blur md:p-10">
-          <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start">
-            <div>
-              <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">AI w pracy</p>
-              <h2 className="mt-3 text-4xl font-semibold">AI jako praktyczne wsparcie w marketingu i komunikacji.</h2>
-              <p className="mt-5 leading-7 text-[#7A665A]">{keepTogether("Korzystam z AI, żeby szybciej organizować informacje, tworzyć treści i usprawniać codzienną pracę.")}</p>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {workflow.map(([nr, title, desc]) => (
-                <div key={title} className="rounded-[1.7rem] border border-[#8A5A3C]/15 bg-[#FAF7F2]/70 p-6 transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl hover:shadow-[#8A5A3C]/10">
-                  <span className="text-sm font-semibold text-[#8A5A3C]">{nr}</span>
-                  <h3 className="mt-4 text-xl font-semibold">{title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-[#7A665A]">{keepTogether(desc)}</p>
-                </div>
-              ))}
-            </div>
+          <div className="mb-10">
+            <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">AI w pracy</p>
+            <h2 className="mt-3 text-4xl font-semibold">AI jako wsparcie procesów, komunikacji i projektów cyfrowych.</h2>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {workflow.map(([nr, title, desc]) => (
+              <div key={title} className="rounded-[1.7rem] border border-[#8A5A3C]/15 bg-[#FAF7F2]/70 p-6 transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl hover:shadow-[#8A5A3C]/10">
+                <span className="text-sm font-semibold text-[#8A5A3C]">{nr}</span>
+                <h3 className="mt-4 text-xl font-semibold">{title}</h3>
+                <p className="mt-3 text-sm leading-6 text-[#7A665A]">{keepTogether(desc)}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section id="help" className="mx-auto max-w-7xl px-6 py-16">
-        <div className="mb-10 max-w-3xl">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">W czym mogę pomóc</p>
-          <h2 className="mt-3 text-4xl font-semibold">Prostsza komunikacja i bardziej uporządkowany marketing.</h2>
-          <p className="mt-5 leading-7 text-[#7A665A]">{keepTogether("Pomagam uporządkować komunikację i działania marketingowe tak, żeby były prostsze, bardziej zrozumiałe i łatwiejsze do wdrożenia.")}</p>
-        </div>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {helpItems.map((item, index) => (
-            <div key={item} className="flex items-start gap-4 rounded-[1.5rem] border border-[#8A5A3C]/15 bg-white/65 p-5 shadow-lg shadow-[#8A5A3C]/5 backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/80 hover:shadow-xl hover:shadow-[#8A5A3C]/10">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#8A5A3C] text-xs font-semibold text-white">{String(index + 1).padStart(2, "0")}</span>
-              <p className="pt-1 text-sm leading-6 text-[#2A1E18]">{keepTogether(item)}</p>
-            </div>
+      <section id="projects" className="mx-auto max-w-7xl px-6 py-16">
+        <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">Wybrane projekty</p>
+        <h2 className="mt-3 text-4xl font-semibold">Projekty łączące komunikację, strategię i działania cyfrowe.</h2>
+        <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          {selectedProjects.map((project) => (
+            <article key={project.title} className="rounded-[2rem] border border-[#8A5A3C]/15 bg-white/65 p-6 shadow-xl shadow-[#8A5A3C]/5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-[#8A5A3C]/25 hover:bg-white/80 hover:shadow-2xl hover:shadow-[#8A5A3C]/10">
+              <h3 className="text-xl font-semibold">{project.title}</h3>
+              <p className="mt-3 text-sm leading-6 text-[#7A665A]">{keepTogether(project.desc)}</p>
+              <ul className="mt-5 space-y-2">
+                {project.points.map((point, idx) => (
+                  <li key={idx} className="flex items-start gap-2 text-sm text-[#7A665A]">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#8A5A3C]" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
           ))}
         </div>
       </section>
@@ -204,7 +243,9 @@ export default function Home() {
         <div className="mb-10 max-w-3xl">
           <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">Doświadczenie i edukacja</p>
           <h2 className="mt-3 text-4xl font-semibold">Ponad 15 lat w marketingu, komunikacji i organizacji.</h2>
-          <p className="mt-5 leading-7 text-[#7A665A]">{keepTogether("Od zarządzania zespołem i standardów w retail, przez marketing operacyjny i employer branding, po komunikację cyfrową i wsparcie projektów.")}</p>
+          <p className="mt-5 leading-7 text-[#7A665A]">
+            {keepTogether("Od zarządzania zespołem i standardów w retail, przez marketing operacyjny i employer branding, po komunikację cyfrową i wsparcie projektów.")}
+          </p>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-[1fr_0.45fr]">

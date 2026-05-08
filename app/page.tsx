@@ -420,7 +420,7 @@ export default function Home() {
             <div>
               <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">Kontakt</p>
               <h2 className="mt-4 max-w-3xl text-4xl font-semibold md:text-5xl">Pomoc w komunikacji i działaniach marketingowych.</h2>
-              <p className="mt-5 max-w-2xl leading-7 text-[#7A665A]">{keepTogether("Szukam roli w marketingu operacyjnym, komunikacji, CMS, event management lub projektach łączących te obszary.")}</p>
+              <p className="mt-5 max-w-2xl leading-7 text-[#7A665A]">{keepTogether("Interesuje mnie marketing, który upraszcza decyzje użytkownika i realnie wspiera rozwój biznesu. Łączę komunikację, strategię i narzędzia AI, skupiając się na funkcjonalności, doświadczeniu użytkownika i jasnym przekazie.")}</p>
             </div>
             <div className="rounded-[2rem] border border-[#8A5A3C]/15 bg-white/65 p-6 shadow-xl shadow-[#8A5A3C]/5 backdrop-blur">
               <div className="space-y-4 text-sm">

@@ -178,7 +178,7 @@ export default function Home() {
             <div className="relative z-20 mx-auto max-w-md overflow-hidden rounded-[2.5rem] border border-[#8A5A3C]/10 bg-gradient-to-br from-white/80 to-[#F8F3EC]/80 p-2 shadow-2xl shadow-[#8A5A3C]/10 backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:shadow-[#8A5A3C]/20">
               <div className="overflow-hidden rounded-[2rem]">
                 <img 
-                  src="/joanna-profile.png" 
+                  src="/images/joanna-profile.png" 
                   alt="Joanna Kłos - Marketing i komunikacja" 
                   className="h-auto w-full object-cover"
                   loading="eager"
@@ -404,7 +404,6 @@ export default function Home() {
               </div>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a href="mailto:joanna.klos1983@gmail.com" className="inline-block rounded-full bg-[#8A5A3C] px-6 py-3 text-sm font-medium text-white shadow-lg transition hover:shadow-xl" style={{backgroundColor: '#8A5A3C'}}>Napisz do mnie</a>
-                <a href="/CV_Joanna_Klos.pdf" className="rounded-full border border-[#8A5A3C]/20 bg-white/60 px-6 py-3 text-sm font-medium text-[#7A665A] transition hover:-translate-y-0.5 hover:bg-white">Pobierz CV</a>
               </div>
             </div>
           </div>

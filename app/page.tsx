@@ -439,6 +439,7 @@ export default function Home() {
               </div>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a href="mailto:joanna.klos1983@gmail.com" className="inline-block rounded-full bg-[#8A5A3C] px-6 py-3 text-sm font-medium text-white shadow-lg transition hover:shadow-xl" style={{backgroundColor: '#8A5A3C'}}>Napisz do mnie</a>
+              <a href="https://www.linkedin.com/in/joanna-k%C5%82os-6372a1146/" target="_blank" rel="noopener noreferrer" className="inline-block rounded-full border border-[#8A5A3C]/20 bg-white/60 px-6 py-3 text-sm font-medium text-[#7A665A] transition hover:-translate-y-0.5 hover:bg-white">LinkedIn</a>
               </div>
             </div>
           </div>

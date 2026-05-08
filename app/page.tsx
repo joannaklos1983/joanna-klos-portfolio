@@ -180,7 +180,7 @@ export default function Home() {
             <div className="relative z-20 mx-auto max-w-md overflow-hidden rounded-[2.5rem] border border-[#8A5A3C]/10 bg-gradient-to-br from-white/80 to-[#F8F3EC]/80 p-2 shadow-2xl shadow-[#8A5A3C]/10 backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:shadow-[#8A5A3C]/20">
               <div className="overflow-hidden rounded-[2rem] bg-[#E8D6CC]/20">
                 <img 
-                  src="/images/Joanna_Klos_zdjecie.png" 
+                  src="/images/Joanna_Klos.png"
                   alt="Joanna Kłos - Marketing i komunikacja" 
                   className="h-auto w-full object-cover"
                   loading="eager"

@@ -135,7 +135,7 @@ export default function Home() {
         <div className="grid gap-12 md:grid-cols-2 md:items-center md:gap-16">
           {/* Left Column - Content */}
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">Strategia • komunikacja • projekty cyfrowe</p>
+            <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">Strategia • komunikacja • treści • projekty cyfrowe</p>
             <h1 className="mt-4 text-5xl font-bold leading-tight md:text-6xl lg:text-7xl">Joanna Kłos</h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-[#7A665A]">
               Łączę strategię, komunikację i wykonanie, pomagając firmom budować spójną obecność marki —
@@ -154,34 +154,40 @@ export default function Home() {
           {/* Right Column - Photo with Abstract Background */}
           <div className="relative min-h-[400px] md:min-h-[500px]">
             {/* Abstract Background Graphic */}
-            <svg 
-              className="absolute left-0 top-0 h-full w-full opacity-[0.06] pointer-events-none" 
-              viewBox="0 0 400 500" 
-              fill="none" 
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid slice"
-            >
-              <path d="M50 100 L150 50 L250 100 L350 80" stroke="#8A5A3C" strokeWidth="1" opacity="0.4"/>
-              <path d="M50 200 L150 180 L250 220 L350 200" stroke="#8A5A3C" strokeWidth="1" opacity="0.3"/>
-              <path d="M50 300 L150 320 L250 280 L350 320" stroke="#8A5A3C" strokeWidth="1" opacity="0.4"/>
-              <path d="M150 50 L150 180 L150 320" stroke="#8A5A3C" strokeWidth="0.5" opacity="0.2"/>
-              <path d="M250 100 L250 220 L250 280" stroke="#8A5A3C" strokeWidth="0.5" opacity="0.2"/>
-              <circle cx="150" cy="50" r="4" fill="#8A5A3C" opacity="0.3"/>
-              <circle cx="250" cy="100" r="4" fill="#8A5A3C" opacity="0.3"/>
-              <circle cx="150" cy="180" r="4" fill="#8A5A3C" opacity="0.3"/>
-              <circle cx="250" cy="220" r="4" fill="#8A5A3C" opacity="0.3"/>
-              <circle cx="150" cy="320" r="4" fill="#8A5A3C" opacity="0.3"/>
-              <circle cx="250" cy="280" r="4" fill="#8A5A3C" opacity="0.3"/>
-            </svg>
+            <div className="absolute left-0 top-0 h-full w-full pointer-events-none opacity-[0.08]">
+              <svg 
+                className="h-full w-full" 
+                viewBox="0 0 400 500" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+              >
+                <path d="M50 100 L150 50 L250 100 L350 80" stroke="#8A5A3C" strokeWidth="2"/>
+                <path d="M50 200 L150 180 L250 220 L350 200" stroke="#8A5A3C" strokeWidth="2"/>
+                <path d="M50 300 L150 320 L250 280 L350 320" stroke="#8A5A3C" strokeWidth="2"/>
+                <path d="M150 50 L150 180 L150 320" stroke="#8A5A3C" strokeWidth="1"/>
+                <path d="M250 100 L250 220 L250 280" stroke="#8A5A3C" strokeWidth="1"/>
+                <circle cx="150" cy="50" r="5" fill="#8A5A3C"/>
+                <circle cx="250" cy="100" r="5" fill="#8A5A3C"/>
+                <circle cx="150" cy="180" r="5" fill="#8A5A3C"/>
+                <circle cx="250" cy="220" r="5" fill="#8A5A3C"/>
+                <circle cx="150" cy="320" r="5" fill="#8A5A3C"/>
+                <circle cx="250" cy="280" r="5" fill="#8A5A3C"/>
+              </svg>
+            </div>
 
             {/* Profile Photo */}
             <div className="relative z-20 mx-auto max-w-md overflow-hidden rounded-[2.5rem] border border-[#8A5A3C]/10 bg-gradient-to-br from-white/80 to-[#F8F3EC]/80 p-2 shadow-2xl shadow-[#8A5A3C]/10 backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:shadow-[#8A5A3C]/20">
-              <div className="overflow-hidden rounded-[2rem]">
+              <div className="overflow-hidden rounded-[2rem] bg-[#E8D6CC]/20">
                 <img 
-                  src="/images/joanna-profile.png" 
+                  src="/images/Joanna_Klos_zdjecie.png" 
                   alt="Joanna Kłos - Marketing i komunikacja" 
                   className="h-auto w-full object-cover"
                   loading="eager"
+                  onError={(e) => {
+                    console.error('Image failed to load');
+                    e.currentTarget.style.display = 'none';
+                  }}
                 />
               </div>
             </div>

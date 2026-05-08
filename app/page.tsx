@@ -136,7 +136,7 @@ export default function Home() {
         {/* Subtle Background Diagram - Left side */}
         <div className="absolute left-5 top-0 h-full w-full pointer-events-none">
           <svg 
-            className="absolute left-0 top-1/2 -translate-y-1/2 h-[120%] w-[65%] opacity-[0.15]" 
+            className="absolute left-5 top-1/2 -translate-y-1/2 h-[130%] w-[75%] opacity-[0.25]" 
             viewBox="0 0 600 800" 
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"

@@ -14,6 +14,7 @@ export default function Home() {
     ["04", "Wdrażam i usprawniam", "Publikuję treści, organizuję działania i szukam prostszych rozwiązań usprawniających komunikację."],
   ];
 
+  const process = ["Poznaję", "Upraszczam", "Tworzę", "Wdrażam", "Usprawniam"];
 
   const projects = [
     {
@@ -125,6 +126,25 @@ export default function Home() {
               <p className="mt-3 text-sm leading-6 text-[#7A665A]">{keepTogether(desc)}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-10">
+        <div className="rounded-[2rem] border border-[#8A5A3C]/15 bg-white/60 p-5 shadow-xl shadow-[#8A5A3C]/5 backdrop-blur md:p-7">
+          <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+            <div>
+              <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">Proces</p>
+              <h2 className="mt-2 text-2xl font-semibold">Komunikacja, którą łatwiej zrozumieć.</h2>
+            </div>
+            <div className="flex flex-wrap items-center gap-3">
+              {process.map((item, index) => (
+                <div key={item} className="flex items-center gap-3">
+                  <span className="rounded-full border border-[#8A5A3C]/15 bg-[#FAF7F2]/80 px-4 py-2 text-sm font-medium text-[#7A665A] shadow-sm">{item}</span>
+                  {index < process.length - 1 && <span className="text-[#8A5A3C]/40">→</span>}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

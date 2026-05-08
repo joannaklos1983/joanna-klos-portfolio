@@ -14,8 +14,6 @@ export default function Home() {
     ["04", "Wdrażam i usprawniam", "Publikuję treści, organizuję działania i szukam prostszych rozwiązań usprawniających komunikację."],
   ];
 
-  const process = ["Poznaję", "Upraszczam", "Tworzę", "Wdrażam", "Usprawniam"];
-
   const projects = [
     {
       tag: "Marketing & Communication",

@@ -130,9 +130,57 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#FAF7F2] via-[#F0E8DC] to-[#E8D6CC] font-sans text-[#2A1E18] antialiased">
-      <section className="mx-auto max-w-7xl px-6 py-20 md:py-32">
-        <div className="grid gap-12 md:grid-cols-2 md:items-center md:gap-16">
+    <main className="min-h-screen bg-gradient-to-br from-[#FDFCFA] via-[#F8F3EC] to-[#F0E6DC] font-sans text-[#2A1E18] antialiased">
+      {/* Hero Section */}
+      <section className="relative mx-auto max-w-7xl px-6 py-20 md:py-32 overflow-hidden">
+        {/* Subtle Background Diagram - Left side */}
+        <div className="absolute left-0 top-0 h-full w-full pointer-events-none">
+          <svg 
+            className="absolute left-0 top-1/2 -translate-y-1/2 h-[120%] w-[55%] opacity-[0.06]" 
+            viewBox="0 0 600 800" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMinYMid meet"
+          >
+            {/* Main flow lines - organic paths */}
+            <path d="M 50 150 Q 150 120, 250 160 T 450 140" stroke="#8A5A3C" strokeWidth="2" fill="none" opacity="0.4"/>
+            <path d="M 80 280 Q 180 250, 280 290 T 480 270" stroke="#8A5A3C" strokeWidth="2" fill="none" opacity="0.3"/>
+            <path d="M 60 420 Q 160 390, 260 430 T 460 410" stroke="#8A5A3C" strokeWidth="1.5" fill="none" opacity="0.35"/>
+            <path d="M 90 560 Q 190 530, 290 570 T 490 550" stroke="#8A5A3C" strokeWidth="1.5" fill="none" opacity="0.25"/>
+            
+            {/* Connecting vertical lines */}
+            <path d="M 250 160 L 280 290" stroke="#8A5A3C" strokeWidth="1" opacity="0.2" strokeDasharray="4 6"/>
+            <path d="M 260 430 L 280 290" stroke="#8A5A3C" strokeWidth="1" opacity="0.2" strokeDasharray="4 6"/>
+            <path d="M 290 570 L 260 430" stroke="#8A5A3C" strokeWidth="1" opacity="0.15" strokeDasharray="4 6"/>
+            
+            {/* Small connecting branches */}
+            <path d="M 150 120 L 120 200 L 180 250" stroke="#8A5A3C" strokeWidth="0.8" opacity="0.2"/>
+            <path d="M 350 140 L 380 220 L 320 270" stroke="#8A5A3C" strokeWidth="0.8" opacity="0.2"/>
+            <path d="M 160 390 L 130 470 L 190 520" stroke="#8A5A3C" strokeWidth="0.8" opacity="0.15"/>
+            
+            {/* Key nodes - larger circles */}
+            <circle cx="250" cy="160" r="8" fill="#8A5A3C" opacity="0.3"/>
+            <circle cx="280" cy="290" r="8" fill="#8A5A3C" opacity="0.3"/>
+            <circle cx="260" cy="430" r="8" fill="#8A5A3C" opacity="0.25"/>
+            <circle cx="290" cy="570" r="7" fill="#8A5A3C" opacity="0.2"/>
+            
+            {/* Secondary nodes - smaller circles */}
+            <circle cx="150" cy="120" r="5" fill="#8A5A3C" opacity="0.25"/>
+            <circle cx="350" cy="140" r="5" fill="#8A5A3C" opacity="0.25"/>
+            <circle cx="180" cy="250" r="4" fill="#8A5A3C" opacity="0.2"/>
+            <circle cx="380" cy="220" r="4" fill="#8A5A3C" opacity="0.2"/>
+            <circle cx="160" cy="390" r="5" fill="#8A5A3C" opacity="0.2"/>
+            <circle cx="360" cy="410" r="4" fill="#8A5A3C" opacity="0.2"/>
+            <circle cx="190" cy="530" r="4" fill="#8A5A3C" opacity="0.15"/>
+            
+            {/* Dotted ambient lines for depth */}
+            <path d="M 100 100 L 500 120" stroke="#8A5A3C" strokeWidth="0.5" opacity="0.1" strokeDasharray="2 8"/>
+            <path d="M 80 350 L 480 370" stroke="#8A5A3C" strokeWidth="0.5" opacity="0.1" strokeDasharray="2 8"/>
+            <path d="M 90 600 L 490 620" stroke="#8A5A3C" strokeWidth="0.5" opacity="0.08" strokeDasharray="2 8"/>
+          </svg>
+        </div>
+
+        <div className="relative z-10 grid gap-12 md:grid-cols-2 md:items-center md:gap-16">
           {/* Left Column - Content */}
           <div>
             <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">Strategia • komunikacja • treści • projekty cyfrowe</p>
@@ -151,31 +199,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Column - Photo with Abstract Background */}
+          {/* Right Column - Photo */}
           <div className="relative min-h-[400px] md:min-h-[500px]">
-            {/* Abstract Background Graphic */}
-            <div className="absolute left-0 top-0 h-full w-full pointer-events-none opacity-[0.08]">
-              <svg 
-                className="h-full w-full" 
-                viewBox="0 0 400 500" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMid slice"
-              >
-                <path d="M50 100 L150 50 L250 100 L350 80" stroke="#8A5A3C" strokeWidth="2"/>
-                <path d="M50 200 L150 180 L250 220 L350 200" stroke="#8A5A3C" strokeWidth="2"/>
-                <path d="M50 300 L150 320 L250 280 L350 320" stroke="#8A5A3C" strokeWidth="2"/>
-                <path d="M150 50 L150 180 L150 320" stroke="#8A5A3C" strokeWidth="1"/>
-                <path d="M250 100 L250 220 L250 280" stroke="#8A5A3C" strokeWidth="1"/>
-                <circle cx="150" cy="50" r="5" fill="#8A5A3C"/>
-                <circle cx="250" cy="100" r="5" fill="#8A5A3C"/>
-                <circle cx="150" cy="180" r="5" fill="#8A5A3C"/>
-                <circle cx="250" cy="220" r="5" fill="#8A5A3C"/>
-                <circle cx="150" cy="320" r="5" fill="#8A5A3C"/>
-                <circle cx="250" cy="280" r="5" fill="#8A5A3C"/>
-              </svg>
-            </div>
-
             {/* Profile Photo */}
             <div className="relative z-20 mx-auto max-w-md overflow-hidden rounded-[2.5rem] border border-[#8A5A3C]/10 bg-gradient-to-br from-white/80 to-[#F8F3EC]/80 p-2 shadow-2xl shadow-[#8A5A3C]/10 backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:shadow-[#8A5A3C]/20">
               <div className="overflow-hidden rounded-[2rem] bg-[#E8D6CC]/20">
@@ -215,27 +240,31 @@ export default function Home() {
                   ${gridClasses}
                   group relative overflow-hidden rounded-[1.7rem] border p-6 backdrop-blur transition-all duration-500
                   ${isHighlighted 
-                    ? 'border-[#8A5A3C]/25 bg-gradient-to-br from-[#8A5A3C]/95 to-[#6B4430]/95 text-white shadow-2xl shadow-[#8A5A3C]/20 hover:shadow-[#8A5A3C]/30' 
+                    ? 'border-[#8A5A3C]/25 bg-gradient-to-br from-[#8A5A3C] via-[#7A4D35] to-[#6B4430] text-white shadow-2xl shadow-[#8A5A3C]/20 hover:shadow-[#8A5A3C]/30' 
                     : 'border-[#8A5A3C]/15 bg-white/60 shadow-xl shadow-[#8A5A3C]/5 hover:-translate-y-1 hover:border-[#8A5A3C]/25 hover:bg-white/75 hover:shadow-2xl hover:shadow-[#8A5A3C]/10'
                   }
                 `}
               >
-                {/* Large background number */}
+                {/* Large background number - POPRAWIONE */}
                 <span 
                   className={`
-                    absolute font-bold leading-none transition-all duration-500
+                    absolute font-bold leading-none transition-all duration-500 pointer-events-none select-none
                     ${isHighlighted 
-                      ? 'right-4 top-2 text-[12rem] text-white/8 group-hover:text-white/12 md:right-6 md:top-4 md:text-[18rem]' 
-                      : 'right-3 top-1 text-[8rem] text-[#8A5A3C]/5 group-hover:text-[#8A5A3C]/8'
+                      ? 'right-4 top-2 text-[12rem] text-white/[0.07] group-hover:text-white/[0.10] md:right-6 md:top-4 md:text-[18rem]' 
+                      : 'right-3 top-1 text-[8rem] text-[#8A5A3C]/[0.04] group-hover:text-[#8A5A3C]/[0.07]'
                     }
                   `}
-                  style={{ fontVariantNumeric: 'tabular-nums' }}
+                  style={{ 
+                    fontVariantNumeric: 'tabular-nums',
+                    zIndex: 0
+                  }}
+                  aria-hidden="true"
                 >
                   {nr}
                 </span>
 
-                {/* Content */}
-                <div className="relative z-10">
+                {/* Content - z wyższym z-index */}
+                <div className="relative" style={{ zIndex: 10 }}>
                   <span 
                     className={`
                       text-sm font-semibold transition-all duration-300

@@ -132,20 +132,59 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-[#FAF7F2] via-[#F0E8DC] to-[#E8D6CC] font-sans text-[#2A1E18] antialiased">
       <section className="mx-auto max-w-7xl px-6 py-20 md:py-32">
-        <div className="text-center">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">Strategia • komunikacja • projekty cyfrowe</p>
-          <h1 className="mt-4 text-5xl font-bold leading-tight md:text-7xl">Joanna Kłos</h1>
-          <p className="mt-6 mx-auto max-w-3xl text-base leading-relaxed text-[#7A665A]">
-            Łączę strategię, komunikację i wykonanie, pomagając firmom budować spójną obecność marki — od struktury przekazu po materiały, strony
-            i działania marketingowe.
-          </p>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <a href="#services" className="inline-block rounded-full bg-[#8A5A3C] px-8 py-4 text-sm font-medium text-white shadow-lg transition hover:shadow-xl" style={{backgroundColor: '#8A5A3C'}}>
-              Zobacz obszary współpracy
-            </a>
-            <a href="#contact" className="rounded-full border border-[#8A5A3C]/20 bg-white/60 px-8 py-4 text-sm font-medium text-[#7A665A] transition hover:-translate-y-0.5 hover:bg-white">
-              Kontakt
-            </a>
+        <div className="grid gap-12 md:grid-cols-2 md:items-center md:gap-16">
+          {/* Left Column - Content */}
+          <div>
+            <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">Strategia • komunikacja • projekty cyfrowe</p>
+            <h1 className="mt-4 text-5xl font-bold leading-tight md:text-6xl lg:text-7xl">Joanna Kłos</h1>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-[#7A665A]">
+              Łączę strategię, komunikację i wykonanie, pomagając firmom budować spójną obecność marki —
+              od struktury przekazu po materiały, strony i działania marketingowe.
+            </p>
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <a href="#services" className="inline-block rounded-full bg-[#8A5A3C] px-8 py-4 text-sm font-medium text-white shadow-lg transition hover:shadow-xl" style={{backgroundColor: '#8A5A3C'}}>
+                Zobacz obszary współpracy
+              </a>
+              <a href="#contact" className="rounded-full border border-[#8A5A3C]/20 bg-white/60 px-8 py-4 text-sm font-medium text-[#7A665A] transition hover:-translate-y-0.5 hover:bg-white">
+                Kontakt
+              </a>
+            </div>
+          </div>
+
+          {/* Right Column - Photo with Abstract Background */}
+          <div className="relative min-h-[400px] md:min-h-[500px]">
+            {/* Abstract Background Graphic */}
+            <svg 
+              className="absolute left-0 top-0 h-full w-full opacity-[0.06] pointer-events-none" 
+              viewBox="0 0 400 500" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice"
+            >
+              <path d="M50 100 L150 50 L250 100 L350 80" stroke="#8A5A3C" strokeWidth="1" opacity="0.4"/>
+              <path d="M50 200 L150 180 L250 220 L350 200" stroke="#8A5A3C" strokeWidth="1" opacity="0.3"/>
+              <path d="M50 300 L150 320 L250 280 L350 320" stroke="#8A5A3C" strokeWidth="1" opacity="0.4"/>
+              <path d="M150 50 L150 180 L150 320" stroke="#8A5A3C" strokeWidth="0.5" opacity="0.2"/>
+              <path d="M250 100 L250 220 L250 280" stroke="#8A5A3C" strokeWidth="0.5" opacity="0.2"/>
+              <circle cx="150" cy="50" r="4" fill="#8A5A3C" opacity="0.3"/>
+              <circle cx="250" cy="100" r="4" fill="#8A5A3C" opacity="0.3"/>
+              <circle cx="150" cy="180" r="4" fill="#8A5A3C" opacity="0.3"/>
+              <circle cx="250" cy="220" r="4" fill="#8A5A3C" opacity="0.3"/>
+              <circle cx="150" cy="320" r="4" fill="#8A5A3C" opacity="0.3"/>
+              <circle cx="250" cy="280" r="4" fill="#8A5A3C" opacity="0.3"/>
+            </svg>
+
+            {/* Profile Photo */}
+            <div className="relative z-20 mx-auto max-w-md overflow-hidden rounded-[2.5rem] border border-[#8A5A3C]/10 bg-gradient-to-br from-white/80 to-[#F8F3EC]/80 p-2 shadow-2xl shadow-[#8A5A3C]/10 backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:shadow-[#8A5A3C]/20">
+              <div className="overflow-hidden rounded-[2rem]">
+                <img 
+                  src="/joanna-profile.jpg" 
+                  alt="Joanna Kłos - Marketing i komunikacja" 
+                  className="h-auto w-full object-cover"
+                  loading="eager"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -156,33 +195,78 @@ export default function Home() {
           Marketing i komunikacja oparte na strukturze, spójności
           i realnych potrzebach biznesu.
         </h2>
-        <div className="mt-10 grid gap-5 md:grid-cols-4">
-          {steps.map(([nr, title, desc]) => (
-            <div key={title} className="rounded-[1.7rem] border border-[#8A5A3C]/15 bg-white/60 p-6 shadow-xl shadow-[#8A5A3C]/5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-[#8A5A3C]/25 hover:bg-white/75 hover:shadow-2xl hover:shadow-[#8A5A3C]/10">
-              <span className="text-sm font-semibold text-[#8A5A3C]">{nr}</span>
-              <h3 className="mt-5 text-xl font-semibold">{title}</h3>
-              <p className="mt-3 text-sm leading-6 text-[#7A665A]">{keepTogether(desc)}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+        <div className="mt-10 grid gap-5 md:grid-cols-6 md:grid-rows-2">
+          {steps.map(([nr, title, desc], index) => {
+            const isHighlighted = index === 1; // "Buduję strukturę komunikacji"
+            const gridClasses = isHighlighted 
+              ? 'col-span-1 md:col-span-3 md:row-span-2' 
+              : 'col-span-1 md:col-span-2';
+            
+            return (
+              <div 
+                key={`${nr}-${title}`}
+                className={`
+                  ${gridClasses}
+                  group relative overflow-hidden rounded-[1.7rem] border p-6 backdrop-blur transition-all duration-500
+                  ${isHighlighted 
+                    ? 'border-[#8A5A3C]/25 bg-gradient-to-br from-[#8A5A3C]/95 to-[#6B4430]/95 text-white shadow-2xl shadow-[#8A5A3C]/20 hover:shadow-[#8A5A3C]/30' 
+                    : 'border-[#8A5A3C]/15 bg-white/60 shadow-xl shadow-[#8A5A3C]/5 hover:-translate-y-1 hover:border-[#8A5A3C]/25 hover:bg-white/75 hover:shadow-2xl hover:shadow-[#8A5A3C]/10'
+                  }
+                `}
+              >
+                {/* Large background number */}
+                <span 
+                  className={`
+                    absolute font-bold leading-none transition-all duration-500
+                    ${isHighlighted 
+                      ? 'right-4 top-2 text-[12rem] text-white/8 group-hover:text-white/12 md:right-6 md:top-4 md:text-[18rem]' 
+                      : 'right-3 top-1 text-[8rem] text-[#8A5A3C]/5 group-hover:text-[#8A5A3C]/8'
+                    }
+                  `}
+                  style={{ fontVariantNumeric: 'tabular-nums' }}
+                >
+                  {nr}
+                </span>
 
-      <section className="mx-auto max-w-7xl px-6 py-10">
-        <div className="rounded-[2rem] border border-[#8A5A3C]/15 bg-white/60 p-5 shadow-xl shadow-[#8A5A3C]/5 backdrop-blur md:p-7">
-          <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-            <div>
-              <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8A5A3C]">Proces</p>
-              <h2 className="mt-2 text-2xl font-semibold">Komunikacja, którą łatwiej zrozumieć.</h2>
-            </div>
-            <div className="flex flex-wrap items-center gap-3">
-              {process.map((item, index) => (
-                <div key={item} className="flex items-center gap-3">
-                  <span className="rounded-full border border-[#8A5A3C]/15 bg-[#FAF7F2]/80 px-4 py-2 text-sm font-medium text-[#7A665A] shadow-sm">{item}</span>
-                  {index < process.length - 1 && <span className="text-[#8A5A3C]/40">→</span>}
+                {/* Content */}
+                <div className="relative z-10">
+                  <span 
+                    className={`
+                      text-sm font-semibold transition-all duration-300
+                      ${isHighlighted 
+                        ? 'text-white/90 group-hover:translate-x-0.5' 
+                        : 'text-[#8A5A3C] group-hover:translate-x-0.5'
+                      }
+                    `}
+                  >
+                    {nr}
+                  </span>
+                  <h3 
+                    className={`
+                      mt-5 font-semibold transition-all duration-300
+                      ${isHighlighted 
+                        ? 'text-2xl text-white group-hover:translate-x-1 md:text-3xl' 
+                        : 'text-xl group-hover:translate-x-0.5'
+                      }
+                    `}
+                  >
+                    {title}
+                  </h3>
+                  <p 
+                    className={`
+                      mt-3 text-sm leading-6 transition-opacity duration-300
+                      ${isHighlighted 
+                        ? 'text-white/85 md:text-base md:leading-7' 
+                        : 'text-[#7A665A]'
+                      }
+                    `}
+                  >
+                    {keepTogether(desc)}
+                  </p>
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -320,7 +404,7 @@ export default function Home() {
               </div>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a href="mailto:joanna.klos1983@gmail.com" className="inline-block rounded-full bg-[#8A5A3C] px-6 py-3 text-sm font-medium text-white shadow-lg transition hover:shadow-xl" style={{backgroundColor: '#8A5A3C'}}>Napisz do mnie</a>
-                <a href="/CV_Joanna_Kłos_Junior_Marketing_Specialist.pdf" className="rounded-full border border-[#8A5A3C]/20 bg-white/60 px-6 py-3 text-sm font-medium text-[#7A665A] transition hover:-translate-y-0.5 hover:bg-white">Pobierz CV</a>
+                <a href="/CV_Joanna_Klos.pdf" className="rounded-full border border-[#8A5A3C]/20 bg-white/60 px-6 py-3 text-sm font-medium text-[#7A665A] transition hover:-translate-y-0.5 hover:bg-white">Pobierz CV</a>
               </div>
             </div>
           </div>

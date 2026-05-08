@@ -182,7 +182,7 @@ export default function Home() {
                 <img 
                   src="/images/Joanna_Klos.png"
                   alt="Joanna Kłos - Marketing i komunikacja" 
-                  className="h-auto w-full object-cover"
+                  className="h-auto w-full object-cover saturate-[0.92] contrast-[1.02] brightness-[1.01]"
                   loading="eager"
                   onError={(e) => {
                     console.error('Image failed to load');

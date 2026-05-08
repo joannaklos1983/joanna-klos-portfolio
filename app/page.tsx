@@ -134,9 +134,9 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative mx-auto max-w-7xl px-6 py-20 md:py-32 overflow-hidden">
         {/* Subtle Background Diagram - Left side */}
-        <div className="absolute left-0 top-0 h-full w-full pointer-events-none">
+        <div className="absolute left-5 top-0 h-full w-full pointer-events-none">
           <svg 
-            className="absolute left-0 top-1/2 -translate-y-1/2 h-[120%] w-[55%] opacity-[0.06]" 
+            className="absolute left-0 top-1/2 -translate-y-1/2 h-[120%] w-[65%] opacity-[0.15]" 
             viewBox="0 0 600 800" 
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"

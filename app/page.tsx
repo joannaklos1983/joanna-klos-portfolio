@@ -447,8 +447,13 @@ export default function Home() {
       </section>
 
       <footer className="border-t border-[#8A5A3C]/10 px-6 py-8 text-center text-sm text-[#7A665A]">
-        © 2026 Joanna Kłos — Portfolio marketingowe
-      </footer>
+  <p>© 2026 Joanna Kłos — Portfolio marketingowe</p>
+
+  <p className="mt-4 text-xs leading-6 text-[#9B8A7E] max-w-3xl mx-auto">
+    To portfolio zostało stworzone z wykorzystaniem AI pod moją ścisłą kontrolą artystyczną i strategiczną.
+    W 2026 roku przewagę daje już nie samo kodowanie, lecz umiejętność świadomego wykorzystywania technologii do realizacji własnej wizji.
+  </p>
+</footer>
     </main>
   );
 }
